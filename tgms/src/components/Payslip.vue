@@ -121,7 +121,7 @@ export default {
   },
 methods:{
   getPdfLink(){
-    return 'http://localhost/php_test/attendance.php?id='+ localStorage.getItem('sid')+'&month='+this.month;
+    return 'http://localhost/php_test/attendance.php?id='+ localStorage.getItem('id')+'&month='+this.month;
   }
 }
 

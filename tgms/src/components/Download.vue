@@ -6,19 +6,31 @@
 
 <table id="customers">
   <tr>
-    <th> Serial Number</th>
-    <th>File Name</th>
+    <th > Serial Number</th>
+    <th> Employee Name </th>
+    <th> Mobile Number </th>
+    <th> File Name </th>
     <th>Download</th>
+    <th>Confirm Approval</th>
   </tr>
+
+
 
   <tr v-for="inf in info" :key="inf.sid"> 
 
-  
-    <td>{{inf.id}}</td>
+    <td text-align:center>{{inf.id}}</td>
+    
+    <td>{{inf.ename}}</td>
+    <td>{{inf.mobile}}</td>
     <td>{{inf.name}}</td>
     <td class="container-login100-form-btn">
-       <button class="login100-form-btn"><a :href="'http://localhost/php_test/downloads.php?file_id='+inf.id" class="btn btn-primary">Submit</a> </button>
+       <button ><a :href="'http://localhost/php_test/downloads.php?file_id='+inf.id" class="btn"> Download </a> </button>
     </td>
+
+      <td class="container-login 00-form-btn"> 
+         <button > <router-link to="/set" class="nav-link"> Approved </router-link> </button>
+         <button ><a :href="'http://localhost/php_test/downloads.php?file_id='+inf.id" class="btn"> Reject </a> </button>
+     </td>
 
 
   </tr>
@@ -140,9 +152,13 @@ export default{
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #04AA6D;
   color: white;
+}
+
+td {
+  text-align: center;
 }
 
 </style>

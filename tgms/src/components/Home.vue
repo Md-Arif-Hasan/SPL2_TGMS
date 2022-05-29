@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class="box">
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -341,5 +341,17 @@
 
 
 <style scoped>
+
+.box {
+ 
+  background-color: #04AA6D;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
+
+
 body{margin-top:20px;}
 </style>

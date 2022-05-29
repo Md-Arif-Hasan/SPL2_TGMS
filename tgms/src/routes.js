@@ -12,8 +12,8 @@ import Dashboard2 from './components/Dashboard2'
 import Attendence from './components/Attendence'
 import EmployeeList from './components/EmployeeList'
 import Payslip from './components/Payslip'
-
 import Download from './components/Download'
+import LoanSet from './components/LoanSet'
 
 
 Vue.use(VueRouter);
@@ -31,7 +31,8 @@ const routes = [
     { path: '/attend', component: Attendence },
     { path: '/emplist', component: EmployeeList },
     { path: '/Payslip', component: Payslip },
-    { path: '/Download', component: Download }
+    { path: '/Download', component: Download },
+    { path: '/set', component: LoanSet }
 ]
 
 const router = new VueRouter({

@@ -127,6 +127,8 @@ export default{
             
              localStorage.setItem('token', response.data.token);
 
+             localStorage.setItem('id', this.id)
+
             
              this.$router.push('/') ;
             
