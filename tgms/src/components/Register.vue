@@ -37,9 +37,7 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 
-           <p class="error" v-if="errors.message">{{ errors.message }}</p>
-
-		    </div>
+           <p class="error" v-if="errors.message">{{ errors.message }}</p>   </div>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Register

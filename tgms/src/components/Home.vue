@@ -1,4 +1,6 @@
 
+
+
 <template>
   <div class="box">
     <link
@@ -14,9 +16,9 @@
                 <!-- Left sidebar -->
                 <div class="col-lg-3 col-md-4">
                   <a
-                    href="mail-compose.html"
-                    class="btn btn-danger waves-effect waves-light btn-block"
-                    >New Mail</a
+                    href="/profile"
+                    class="btn btn-success waves-effect waves-light btn-block"
+                    >Profile</a
                   >
                   <div class="card shadow-none mt-3">
                     <div class="list-group shadow-none">
@@ -344,8 +346,8 @@
 
 .box {
  
-  background-color: #04AA6D;
-  position:absolute;
+background-color: #2890b3;
+  position:100%;
   top:0px;
   right:0px;
   bottom:0px;
@@ -355,3 +357,4 @@
 
 body{margin-top:20px;}
 </style>
+

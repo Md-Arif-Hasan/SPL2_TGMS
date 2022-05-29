@@ -76,8 +76,11 @@ import axios from 'axios';
 
 
 <template>
+<div>
 
+<nav-2></nav-2>
 <div class="login-box">
+ 
   <h2> Application for Loan</h2>
   <form>
     <div class="user-box">
@@ -108,7 +111,9 @@ import axios from 'axios';
 
      </form>
 
-      <button style="font-weight: bold" v-on:click="submitForm()">Upload</button>
+      <br> <button style="font-weight: bold" v-on:click="submitForm()">Upload</button>
+</div>
+
 </div>
 
 </template>
@@ -117,7 +122,12 @@ import axios from 'axios';
 
 <script>
 import axios from 'axios';
-  export default {
+import Nav2 from './Nav2.vue';
+ export default{
+    name: 'FileUp',
+  components: {
+    Nav2
+  },
     data(){
       return {
         employeeid:'',

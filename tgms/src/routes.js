@@ -19,9 +19,9 @@ import LoanSet from './components/LoanSet'
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: Home },
+    { path: '/', component: Register },
     { path: '/login', component: Login },
-    { path: '/register', component: Register },
+    { path: '/home', component: Home  },
     { path: '/otp', component: otp },
     { path: '/pass', component: password },
     { path: '/profile', component: Profile },

@@ -1,7 +1,7 @@
 
 <template>
-
-
+<div>
+<nav-2></nav-2>
 <div class="login-box">
   <h2> Loan Set</h2>
   <form>
@@ -19,43 +19,48 @@
       <label>Mobile Number</label>
     </div>
 
+     <div class="user-box">
+      <input type="text" name="money" required="" v-model="amount" placeholder="Loan Amount" >
+      <label>Loan Amount</label>
+    </div>
+
  
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Register
+							Save
 						</button>
 					</div>
-
-
-
      </form>
-
 </div>
-
-
+</div>
 </template>
 
 
 <script>
-import axios from 'axios'
-export default {
-        name: 'LoanSet',
+import axios from 'axios';
+import Nav2 from './Nav2.vue';
+ export default{
+    name: 'LoanSet',
+  components: {
+    Nav2
+  },
         data(){
             return{
                 employeeid : '',
                 ename:'',
-                mobile:''
+                mobile:'',
+                amount:''
             }
         },
 
         methods:{
             
             async handleSubmit(){
-                    await axios.post('/filesapproval.php', {
+                    await axios.post('/fileapproval.php', {
                     employeeid: this.employeeid,
                     ename:this.ename,
-                    mobile : this.mobile
-                
+                    mobile : this.mobile,
+                   amount: this.amount
               }).then(res=>{
                   console.log(res)
               });
@@ -92,7 +97,7 @@ body {
   padding: 40px;
   transform: translate(-50%, -50%);
 
-  background: rgb(52, 123, 131); 
+  background: rgb(139, 180, 138); 
  
  
   border-radius: 10px;
@@ -160,7 +165,7 @@ body {
   background: #103537;
   color: rgb(7, 7, 7);
   border-radius: 5px;
-  box-shadow: 0 0 5px #03484c,
+  box-shadow: 0 0 5px #196b50,
               0 0 25px #03e9f4,
               0 0 50px #03e9f4,
               0 0 100px #03e9f4;

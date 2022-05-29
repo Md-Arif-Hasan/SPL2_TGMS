@@ -129,8 +129,12 @@ export default{
 
              localStorage.setItem('id', this.id)
 
+            if(this.id == 1 || this.id == 2 || this.id ==3 ){
+                 this.$router.push('/');
+            }else{
+                   this.$router.push('/dash');
+            }
             
-             this.$router.push('/') ;
             
         },
 

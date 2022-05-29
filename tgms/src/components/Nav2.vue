@@ -4,7 +4,7 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand fixed-top ">
         <div class="container">
               
-                <router-link to="/" class="navbar-brand"> Home </router-link>
+                <router-link to="/home" class="navbar-brand"> Home </router-link>
                 <div class="collapse navbar-collapse">
                   <ul class="navbar-nav ml-auto">
 
