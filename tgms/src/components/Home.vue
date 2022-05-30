@@ -2,16 +2,13 @@
 
 
 <template>
-  <div class="box">
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <div class="container">
+  
+
+    <div class="container" style="background-color:black;color:white;padding:20px;">
       <div class="row">
         <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
+          <div class="card" style="color:black;">
+            <div class="card-body" >
               <div class="row">
                 <!-- Left sidebar -->
                 <div class="col-lg-3 col-md-4">
@@ -265,10 +262,14 @@
                       </p>
 
                       <hr />
+
+                      <!--
                       <h4>
                         <i class="fa fa-paperclip mr-2"></i> Attachments
                         <span>(3)</span>
                       </h4>
+
+                      
                       <div class="row">
                         <div class="col-sm-4 col-md-3">
                           <a href="javascript:void();">
@@ -299,6 +300,8 @@
                         </div>
                       </div>
 
+                     
+
                       <div class="media mt-3">
                         <a href="javascript:void();" class="media-left">
                           <img
@@ -324,8 +327,12 @@
                           <i class="fa fa-send mr-1"></i> Send
                         </button>
                       </div>
+                      -->
                     </div>
+                    
+
                   </div>
+
                   <!-- card -->
                 </div>
                 <!-- end Col-9 -->
@@ -337,14 +344,14 @@
       </div>
       <!-- End row -->
     </div>
-  </div>
+
 </template>
 
 
 
 <style scoped>
 
-.box {
+.container {
  
 background-color: #2890b3;
   position:100%;

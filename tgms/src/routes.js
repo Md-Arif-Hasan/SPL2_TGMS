@@ -14,6 +14,7 @@ import EmployeeList from './components/EmployeeList'
 import Payslip from './components/Payslip'
 import Download from './components/Download'
 import LoanSet from './components/LoanSet'
+import SalaryInsert from './components/SalaryInsert'
 
 
 Vue.use(VueRouter);
@@ -21,7 +22,7 @@ Vue.use(VueRouter);
 const routes = [
     { path: '/', component: Register },
     { path: '/login', component: Login },
-    { path: '/home', component: Home  },
+    { path: '/home', component: Home },
     { path: '/otp', component: otp },
     { path: '/pass', component: password },
     { path: '/profile', component: Profile },
@@ -32,7 +33,8 @@ const routes = [
     { path: '/emplist', component: EmployeeList },
     { path: '/Payslip', component: Payslip },
     { path: '/Download', component: Download },
-    { path: '/set', component: LoanSet }
+    { path: '/set', component: LoanSet },
+    { path: '/setsal', component: SalaryInsert },
 ]
 
 const router = new VueRouter({

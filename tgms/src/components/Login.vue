@@ -130,9 +130,9 @@ export default{
              localStorage.setItem('id', this.id)
 
             if(this.id == 1 || this.id == 2 || this.id ==3 ){
-                 this.$router.push('/');
+                 this.$router.push('/dash');
             }else{
-                   this.$router.push('/dash');
+                   this.$router.push('/home');
             }
             
             
