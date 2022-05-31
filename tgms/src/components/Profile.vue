@@ -155,6 +155,17 @@ button:hover, a:hover {
               I provide services for our company. It's one of the biggest company of North bangle.
                My passion is to dedicatedly my job and gather experiences through the meaningful
               interactions.
+
+
+              1.  add user (new form - direct add to users table)
+              2. remove user ( from backend )
+              3.  Make transaction
+              4. Teanaaction histroy 
+              5. warehouse data newar jonno ekta
+              6. Warehouse report 
+              7. alart box all page
+              8. password varify
+              9. all varifcation( otp, pass)
             </p>
 
             <!-- <div v-for="inf in info" :key="inf.sid">
