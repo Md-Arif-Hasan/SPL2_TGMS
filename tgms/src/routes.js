@@ -25,7 +25,7 @@ const routes = [
     { path: '/home', component: Home },
     { path: '/otp', component: otp },
     { path: '/pass', component: password },
-    { path: '/profile', component: Profile },
+    { path: '/profile', component: Profile, name: 'Profile' },
     { path: '/dash', component: Dashboard },
     { path: '/files', component: FileUp },
     { path: '/dash2', component: Dashboard2 },

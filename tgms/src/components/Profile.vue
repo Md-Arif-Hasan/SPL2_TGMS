@@ -137,11 +137,10 @@ button:hover, a:hover {
 -->
 
 
-
 <template>
   <div>
-        <nav-2></nav-2>
-
+    
+  <!-- <p> {{info}} </p>  -->
 
   <section class="section about-section gray-bg" id="about">
     <div class="container">
@@ -150,13 +149,11 @@ button:hover, a:hover {
           <div class="about-text go-to">
             <h3 class="dark-color">About Me</h3>
             <h6 class="theme-color lead">
-              A Lead UX &amp; UI designer based in Canada
+              An Employee of Sultan Tea Garden
             </h6>
             <p>
-              I <mark>design and develop</mark> services for customers of all
-              sizes, specializing in creating stylish, modern websites, web
-              services and online stores. My passion is to design digital user
-              experiences through the bold interface and meaningful
+              I provide services for our company. It's one of the biggest company of North bangle.
+               My passion is to dedicatedly my job and gather experiences through the meaningful
               interactions.
             </p>
 
@@ -168,16 +165,17 @@ button:hover, a:hover {
             </div> -->
 
 
-          <div v-for="inf in info" :key="inf.sid">
+          <div>
             <div class="row about-list" >
               <div class="col-md-6">
                 <div class="media">
-                  <label>Name : </label>
-                  <p>  {{ inf.name }}</p>
+                  <label> <b> Name </b></label>
+                  <p> <b> {{ info.name }}</b> </p>
                 </div>
+
                 <div class="media">
-                  <label> Mobile </label>
-                  <p> {{ inf.mobile }}</p>
+                  <label> EID  </label>
+                  <p> {{ info.id }}</p>
                 </div>
                 <div class="media">
                   <label>Residence</label>
@@ -194,8 +192,8 @@ button:hover, a:hover {
                   <p>info@domain.com</p>
                 </div>
                 <div class="media">
-                  <label>Phone</label>
-                  <p>820-885-3321</p>
+                  <label>Mobile </label>
+                  <p>{{info.mobile}}</p>
                 </div>
                 <div class="media">
                   <label>Skype</label>
@@ -227,14 +225,14 @@ button:hover, a:hover {
         <div class="row">
           <div class="col-6 col-lg-3">
             <div class="count-data text-center">
-              <h6 class="count h2" data-to="500" data-speed="500">500</h6>
-              <p class="m-0px font-w-600">Happy Clients</p>
+              <h6 class="count h2" data-to="500" data-speed="500"> {{info.name}}</h6>
+              <p class="m-0px font-w-600">Employee Name</p>
             </div>
           </div>
           <div class="col-6 col-lg-3">
             <div class="count-data text-center">
-              <h6 class="count h2" data-to="150" data-speed="150">150</h6>
-              <p class="m-0px font-w-600">Project Completed</p>
+              <h6 class="count h2" data-to="150" data-speed="150">{{info.id}}</h6>
+              <p class="m-0px font-w-600">employee ID</p>
             </div>
           </div>
           <div class="col-6 col-lg-3">
@@ -261,25 +259,41 @@ button:hover, a:hover {
 
 <script>
 import axios from 'axios';
-import Nav2 from './Nav2.vue';
+
+
 export default{
-    name: 'Profile',
+
+  // props:['info'],
+
+  name: 'Profile',
+
   components: {
-    Nav2
+  
   },
 
   data () {
+  
     return {
-      info: ''
+      personinfo: '',
+      info:''
     }
   },
   mounted () {
+
+
     axios
-      .get('/read.php?id='+ localStorage.getItem('sid'))
+      .get('/read.php?id='+ localStorage.getItem('id'))
       
-      .then(response => (this.info = response.data))
+      .then(response => (this.personinfo = response.data))
        
-  }
+  },
+
+    created() {
+            this.info = this.$route.params.inf;
+        },
+
+
+
 }
 
 </script>
@@ -407,7 +421,7 @@ mark {
   color: currentColor;
 }
 .theme-color {
-  color: #fc5356;
+  color: #0a9a41;
 }
 .dark-color {
   color: #20247b;
