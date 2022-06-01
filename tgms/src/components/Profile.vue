@@ -1,141 +1,3 @@
-<!--
-<template>
-<div>
-     <div v-for="inf in info" :key="inf.sid">
-            Name: {{inf.name}} <br> Mobile: {{inf.mobile}}
-             <br><br>
-    </div>
-</div>
-</template>
-
-
-
-<script>
-import axios from 'axios'
-export default{
-    name: 'Profile',
-
-
-  data () {
-    return {
-      info: ''
-    }
-  },
-  mounted () {
-    axios
-      .get('/read.php?id='+ localStorage.getItem('sid'))
-      
-      .then(response => (this.info = response.data))
-       
-  }
-}
-
-</script>
-
-
-
-
-<style scoped>
-.contact-form {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 400px;
-	height: 300px;
-	padding: 80px 40px;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-div{
-color: #050505;
-font-family: cursive;
-font-size: 25px;
-}
-</style>
-
-
-<template>
-<div>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="card">
-  <img src="../assets/img-01.png" alt="John" style="width:500">
-
-     <div v-for="inf in info" :key="inf.sid">
-           <h1>Name: {{inf.name}} </h1> 
-            <br> 
-             <p class="title"> Mobile: {{inf.mobile}} </p>
-            <br><br>
-    </div>
-
-</div>
-</div>
-</template>
-
-
-
-<script>
-import axios from 'axios'
-export default{
-    name: 'Profile',
-  data () {
-    return {
-      info: ''
-    }
-  },
-  mounted () {
-    axios
-      .get('/read.php?id='+ localStorage.getItem('sid'))
-      
-      .then(response => (this.info = response.data))
-       
-  }
-}
-
-</script>
-
-
-
-<style scoped>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width:770px;
-  margin: auto;
-  text-align: center;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-</style>
-
--->
-
 <template>
   <div>
     <!-- <p> {{info}} </p>  -->
@@ -150,10 +12,11 @@ button:hover, a:hover {
               <p>
                 I provide services for our company. It's one of the biggest
                 company of North bangle. My passion is to dedicatedly my job and
-                gather experiences through the meaningful interactions. 3. Make
-                transaction 4. Teanaaction histroy 5. 7. alart box all page 8.
-                password varify 9. all varifcation( otp, pass) 10. repayment 11.
-                Reject Users (delete application) 11. User profile( employees)
+                gather experiences through the meaningful interactions. 1. add
+                user (new form - direct add to users table) 2. remove user (
+                from backend ) 3. Make transaction 4. Teanaaction histroy 5.
+                warehouse data newar jonno ekta 6. Warehouse report 7. alart box
+                all page 8. password varify 9. all varifcation( otp, pass)
               </p>
 
               <!-- <div v-for="inf in info" :key="inf.sid">
