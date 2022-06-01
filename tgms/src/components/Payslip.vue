@@ -94,10 +94,10 @@
             </span>
           </div> -->
 
-          <div class="container-login100-form-btn">
-            
-            <button class="login100-form-btn"><a :href="getPdfLink()" class="btn btn-primary">Submit</a> </button>
+          <div>
+            <button ><a :href="getPdfLink()" class="btn btn-primary">Submit</a> </button>
           </div>
+
         </form>
       </div>
     </div>
@@ -114,14 +114,13 @@ export default {
 
   data() {
     return {
-      employeeid: "",
-      month: "",
-   
+      employeeid:'',
+      month: ''
     };
   },
 methods:{
   getPdfLink(){
-    return 'http://localhost/php_test/attendance.php?id='+ localStorage.getItem('id')+'&month='+this.month;
+    return 'http://localhost/php_test/attendance.php?id='+ this.employeeid +'&month='+this.month;
   }
 }
 
@@ -641,5 +640,4 @@ iframe {
   }
 }
 </style>
-
 

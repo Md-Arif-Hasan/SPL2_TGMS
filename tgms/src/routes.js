@@ -15,6 +15,11 @@ import Payslip from './components/Payslip'
 import Download from './components/Download'
 import LoanSet from './components/LoanSet'
 import SalaryInsert from './components/SalaryInsert'
+import adduser from './components/adduser'
+import warehousereport from './components/warehousereport'
+import warehousein from './components/warehousein'
+import farmerlist from './components/farmerlist'
+import repayment from './components/repayment'
 
 
 Vue.use(VueRouter);
@@ -35,6 +40,12 @@ const routes = [
     { path: '/Download', component: Download },
     { path: '/set', component: LoanSet },
     { path: '/setsal', component: SalaryInsert },
+    { path: '/add', component: adduser },
+    { path: '/wreport', component: warehousereport },
+    { path: '/win', component: warehousein },
+    { path: '/flist', component: farmerlist },
+    { path: '/repay', component: repayment, name: 'repayment' }
+
 ]
 
 const router = new VueRouter({

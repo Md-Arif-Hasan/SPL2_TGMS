@@ -36,7 +36,6 @@
             <input
               class="input100"
               type="date"
-              
               v-model="date"
               placeholder="Date"
             />
@@ -51,7 +50,7 @@
             data-validate="Password is required"
           > -->
 
-            <!-- <input
+          <!-- <input
               class="input100"
               type="radio"
               name="status"
@@ -59,29 +58,37 @@
               value="Yes"
             /> -->
 
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="1" />
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            v-model="status"
+            value="1"
+          />
           <label for="html"> YES </label><br />
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="0" />
-            <label for="html"> NO </label><br />
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            v-model="status"
+            value="0"
+          />
+          <label for="html"> NO </label><br />
 
-            <!-- <span class="focus-input100"></span>
+          <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">
               <i class="fa fa-lock" aria-hidden="true"></i>
             </span>
           </div> -->
 
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn"> Submit </button>
+            <button class="login100-form-btn">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </template>
-
-
-
-
 
 <script>
 import axios from "axios";
@@ -104,21 +111,17 @@ export default {
       await axios.post("attins.php", {
         employeeid: this.employeeid,
         date: this.date,
-        status: this.status
+        status: this.status,
       });
 
-       this.$router.push("/dash");
+      this.$router.push("/dash");
 
       //localStorage.setItem('token', response.data.token);
-     // localStorage.setItem("sid", this.id);
+      // localStorage.setItem("sid", this.id);
     },
   },
 };
 </script>
-
-
-
-
 
 <style scoped>
 /*//////////////////////////////////////////////////////////////////
@@ -589,5 +592,3 @@ iframe {
   }
 }
 </style>
-
-
