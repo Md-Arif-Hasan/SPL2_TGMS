@@ -26,7 +26,7 @@
             alt=""
             class="img-fluid mb-3 d-none d-md-block"
           />
-          <h1>Add a User</h1>
+          <h1>Repayment</h1>
         </div>
 
         <form @submit.prevent="handleSubmit">
@@ -96,29 +96,46 @@ export default {
   data() {
     return {
       info: "",
-
       amount: "",
     };
   },
-  mounted() {
-    axios
-      .get("/repayment.php?id=" + this.info.employeeid)
-      .then((response) => (this.personinfo = response.data));
+
+  methods: {
+    async handleSubmit() {
+      await axios
+        .post("/repayment.php", {
+          id: this.info.employeeid,
+          amount: this.amount,
+        })
+        .then((res) => {
+          console.log(res);
+          this.$router.push("/flist");
+        });
+    },
+
+    // getPdfLink() {
+    //   this.info = this.$route.params.inf;
+
+    //   console.log(this.info.id);
+    //   axios.delete("/delete.php?id=" + this.info.id);
   },
 
   created() {
     this.info = this.$route.params.inf;
   },
-
-  // getPdfLink() {
-  //   this.info = this.$route.params.inf;
-
-  //   console.log(this.info.id);
-  //   axios.delete("/delete.php?id=" + this.info.id);
 };
 </script>
 
 <style scoped>
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#button {
+  padding-top: 100;
+  padding-left: 400;
+}
 /*
 *
 * ==========================================

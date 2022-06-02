@@ -12,11 +12,15 @@
               <p>
                 I provide services for our company. It's one of the biggest
                 company of North bangle. My passion is to dedicatedly my job and
-                gather experiences through the meaningful interactions. 1. add
-                user (new form - direct add to users table) 2. remove user (
-                from backend ) 3. Make transaction 4. Teanaaction histroy 5.
-                warehouse data newar jonno ekta 6. Warehouse report 7. alart box
-                all page 8. password varify 9. all varifcation( otp, pass)
+                gather experiences through the meaningful interactions. 1. Make
+                transaction 2. Teanaaction histroy 3. alart box all page 4.
+                password varify 5. all varifcation( otp, pass) 6. User profile
+                7. Yearly payslip 8. Transaction history search
+              </p>
+
+              <p>
+                Nav bar code == BOOTSRAPIOUS -
+                https://bootstrapious.com/p/bootstrap-vertical-navbar
               </p>
 
               <!-- <div v-for="inf in info" :key="inf.sid">

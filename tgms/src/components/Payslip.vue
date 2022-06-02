@@ -6,11 +6,8 @@
           <img src="../assets/img-01.png" alt="IMG" />
         </div>
 
-        <form
-          
-          class="login100-form validate-form"
-        >
-          <span class="login100-form-title"> Attendence Payslip </span>
+        <form class="login100-form validate-form">
+          <span class="login100-form-title">Transaction </span>
 
           <div
             class="wrap-input100 validate-input"
@@ -23,10 +20,10 @@
               v-model="employeeid"
               placeholder="ID"
             />
-            <span class="focus-input100"></span>
+            <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span>
+            </span> -->
           </div>
 
           <!-- <div
@@ -66,47 +63,45 @@
             
              -->
 
- <div class="row">
-  <div class="col-sm-3">
-    <div class="form-group">
-      <select   v-model="month" class="selectpicker form-control">
-        <option  value="1">January</option>
-        <option value="2">February</option>
-        <option value="3" >March</option>
-          <option value="4">April </option>
-        <option value="5" >May</option>
-        <option value="6"> June</option>
-         <option value="7" >July </option>
-        <option  value="8" >August</option>
-        <option  value="9">September</option>
-           <option  value="10">October </option>
-        <option  value="11">November </option>
-        <option  value="12" >December</option>
-      </select>
-    </div>
-  </div>
-</div>
+          <div>
+            <div>
+              <div>
+                <select v-model="month" name="languages" class="input100">
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
-
-            <!-- <span class="focus-input100"></span>
+          <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">
               <i class="fa fa-lock" aria-hidden="true"></i>
             </span>
           </div> -->
 
-          <div>
-            <button ><a :href="getPdfLink()" class="btn btn-primary">Submit</a> </button>
-          </div>
+          <br />
 
+          <div>
+            <button>
+              <a :href="getPdfLink()" class="btn btn-primary">Submit</a>
+            </button>
+          </div>
         </form>
       </div>
     </div>
   </div>
 </template>
-
-
-
-
 
 <script>
 export default {
@@ -114,21 +109,25 @@ export default {
 
   data() {
     return {
-      employeeid:'',
-      month: ''
+      employeeid: "",
+      month: "",
     };
   },
-methods:{
-  getPdfLink(){
-    return 'http://localhost/php_test/attendance.php?id='+ this.employeeid +'&month='+this.month;
-  }
-}
-
+  methods: {
+    getPdfLink() {
+      return (
+        "http://localhost/php_test/attendance.php?id=" +
+        this.employeeid +
+        "&month=" +
+        this.month
+      );
+    },
+  },
 
   //   mounted () {
   //   axios
-  //   
-      
+  //
+
   //     .then(response => {
   //   console.log(response);
   //   const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
@@ -142,24 +141,17 @@ methods:{
   //     //console.log(this.employeeid +" "+ this.date+" " + this.status);
 
   //     await axios.get("attendance.php", {
-      
+
   //       employeeid: this.employeeid,
   //       month: this.month
   //     });
-
-   
 
   //     //localStorage.setItem('token', response.data.token);
   //    // localStorage.setItem("sid", this.id);
   //   },
   // },
-}
-
+};
 </script>
-
-
-
-
 
 <style scoped>
 /*//////////////////////////////////////////////////////////////////
@@ -202,15 +194,12 @@ a:hover {
   color: #57b846;
 }
 
-
-
 .special {
   font-weight: bold !important;
   color: #fff !important;
   background: #bc0000 !important;
   text-transform: uppercase;
 }
-
 
 /*---------------------------------------------*/
 h1,
@@ -418,7 +407,7 @@ iframe {
   font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
-  color: #666666;
+  color: #151414;
 
   display: block;
   width: 100%;
@@ -640,4 +629,3 @@ iframe {
   }
 }
 </style>
-

@@ -245,7 +245,6 @@ export default {
         .post("/readsingle.php", {
           id: this.id,
           name: this.name,
-
           mobile: this.mobile,
         })
         .then((res) => {

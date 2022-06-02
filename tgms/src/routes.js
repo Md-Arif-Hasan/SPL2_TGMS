@@ -20,6 +20,8 @@ import warehousereport from './components/warehousereport'
 import warehousein from './components/warehousein'
 import farmerlist from './components/farmerlist'
 import repayment from './components/repayment'
+import wagestransaction from './components/wagestransaction'
+import calculatewages from './components/calculatewages'
 
 
 Vue.use(VueRouter);
@@ -44,7 +46,9 @@ const routes = [
     { path: '/wreport', component: warehousereport },
     { path: '/win', component: warehousein },
     { path: '/flist', component: farmerlist },
-    { path: '/repay', component: repayment, name: 'repayment' }
+    { path: '/repay', component: repayment, name: 'repayment' },
+    { path: '/wagestrans', component: wagestransaction },
+    { path: '/calcwages', component: calculatewages }
 
 ]
 

@@ -54,7 +54,7 @@
                 <button
                   @click="
                     () => {
-                      deleteProfile(inf.id);
+                      deleteProfile(inf.employeeid);
                     }
                   "
                 >
