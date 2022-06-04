@@ -7,7 +7,7 @@
         </div>
 
         <form class="login100-form validate-form">
-          <span class="login100-form-title">Transaction </span>
+          <span class="login100-form-title"> Payslip </span>
 
           <div
             class="wrap-input100 validate-input"
@@ -26,42 +26,7 @@
             </span> -->
           </div>
 
-          <!-- <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          >
-            <input
-              class="input100"
-              type="date"
-              
-              v-model="date"
-              placeholder="Date"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-
-        <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          > 
-
-            <input
-              class="input100"
-              type="radio"
-              name="status"
-              v-model="status"
-              value="Yes"
-            /> 
-
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="1" />
-          <label for="html"> YES </label><br />
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="0" />
-            <label for="html"> NO </label><br />
-            
-             -->
+        
 
           <div>
             <div>

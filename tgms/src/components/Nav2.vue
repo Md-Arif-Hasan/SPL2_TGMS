@@ -1,13 +1,14 @@
 <template>
   <nav class="navbar navbar-dark bg-dark navbar-expand fixed-top">
     <div class="container">
-      <router-link to="/home" class="navbar-brand"> Home </router-link>
+
+
+
+                <router-link to="/home" class="navbar-brand"> Home </router-link>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <router-link to="/profile" class="nav-link"> Profile </router-link>
-          </li>
 
+  
           <li class="nav-item">
             <router-link to="/file" class="nav-link"> Application </router-link>
           </li>
@@ -31,10 +32,20 @@
           </li>
 
           <li class="nav-item">
+            <router-link to="/sin" class="nav-link"> Salary Insert</router-link>
+          </li>
+
+          
+          <li class="nav-item">
+            <router-link to="/win" class="nav-link"> Wages Insert</router-link>
+          </li>
+
+          <li class="nav-item">
             <router-link to="/win" class="nav-link">
               Warehouse Insert</router-link
             >
           </li>
+          
 
           <li class="nav-item">
             <router-link to="/wreport" class="nav-link">

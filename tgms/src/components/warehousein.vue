@@ -17,46 +17,20 @@
     </header>
 
     <div class="container">
-      <div class="row py-5 mt-4 align-items-center">
+      <div class="row py-5 mt-0 ">
         <!-- For Demo Purpose -->
-        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+        <div class="col-md-5 pr-lg-12 mb-6 mb-md-10 col ">
           <img
             src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg"
             alt=""
-            class="img-fluid mb-3 d-none d-md-block"
+            class="img-fluid col-md-50 d-none d-md-block" 
           />
-          <h1>Add a User</h1>
+          <h1> Warehouse Info</h1>
         </div>
 
         <!-- Registeration Form -->
 
         <div class="col-md-5 col-lg-5 ml-auto">
-          <input
-            type="radio"
-            id="html"
-            name="fav_language"
-            v-model="item"
-            value="tea"
-          />
-          <label for="html"> Tea Leaf </label><br />
-
-          <input
-            type="radio"
-            id="html"
-            name="fav_language"
-            v-model="item"
-            value="fertilizer"
-          />
-          <label for="html"> Fertilizer </label>
-          <br />
-          <input
-            type="radio"
-            id="html"
-            name="fav_language"
-            v-model="item"
-            value="pesticide"
-          />
-          <label for="html"> Pesticides </label> <br />
 
           <form @submit.prevent="handleSubmit">
             <div class="row">
@@ -107,30 +81,10 @@
                 </a>
               </div> -->
 
-              <div class="col-md-5 col-lg-5 ml-auto">
-                <input
-                  type="radio"
-                  id="html"
-                  name="fav_language"
-                  v-model="status"
-                  value="1"
-                />
-                <label for="html"> Incoming </label><br />
-
-                <input
-                  type="radio"
-                  id="html"
-                  name="fav_language"
-                  v-model="status"
-                  value="0"
-                />
-                <label for="html"> Outgoing </label>
-                <br />
-              </div>
-
+      
               <br />
-              <div class="container-login100-form-btn">
-                <button class="login100-form-btn">Register</button>
+              <div class="container-login100-form-btn container">
+                <button class="login100-form-btn">Set Info</button>
               </div>
 
               <!-- Already Registered -->
@@ -183,6 +137,9 @@ export default {
 *
 */
 
+.container{
+  padding-top: 95px;
+}
 .border-md {
   border-width: 2px;
 }
@@ -214,10 +171,10 @@ export default {
 * ==========================================
 *
 */
-
+/* 
 body {
   min-height: 100vh;
-}
+} */
 
 .form-control:not(select) {
   padding: 1.5rem 0.5rem;

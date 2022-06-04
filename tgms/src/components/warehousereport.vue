@@ -7,7 +7,7 @@
         </div>
 
         <form class="login100-form validate-form">
-          <span class="login100-form-title"> Attendence Payslip </span>
+          <span class="login100-form-title"> Warehouse Report </span>
 
           <div
             class="wrap-input100 validate-input"

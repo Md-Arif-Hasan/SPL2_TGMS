@@ -36,7 +36,12 @@
               <div class="input-group col-lg-12 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="input-group-text bg-white px-4 border-md border-right-0"
+                    class="
+                      input-group-text
+                      bg-white
+                      px-4
+                      border-md border-right-0
+                    "
                   >
                     <i class="fa fa-user text-muted"></i>
                   </span>
@@ -55,7 +60,12 @@
               <div class="input-group col-lg-12 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="input-group-text bg-white px-4 border-md border-right-0"
+                    class="
+                      input-group-text
+                      bg-white
+                      px-4
+                      border-md border-right-0
+                    "
                   >
                     <i class="fa fa-user text-muted"></i>
                   </span>
@@ -74,7 +84,12 @@
               <div class="input-group col-lg-12 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="input-group-text bg-white px-4 border-md border-right-0"
+                    class="
+                      input-group-text
+                      bg-white
+                      px-4
+                      border-md border-right-0
+                    "
                   >
                     <i class="fa fa-phone-square text-muted"></i>
                   </span>

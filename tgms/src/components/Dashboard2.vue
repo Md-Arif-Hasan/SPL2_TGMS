@@ -22,8 +22,8 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
-    padding: 50px 50px 50px;
-	line-height: 150px;
+  padding: 50px 50px 50px;
+  line-height: 150px;
   height: 350px;
   background: #135472;
 }

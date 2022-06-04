@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Home from './components/Home'
 import Login from './components/Login'
 import Register from './components/Register'
-import otp from './components/otp'
+import aboutus from './components/aboutus'
 import password from './components/password'
 import Profile from './components/Profile'
 import Dashboard from './components/Dashboard'
@@ -21,7 +21,12 @@ import warehousein from './components/warehousein'
 import farmerlist from './components/farmerlist'
 import repayment from './components/repayment'
 import wagestransaction from './components/wagestransaction'
-import calculatewages from './components/calculatewages'
+import salarytransaction from './components/salarytransaction'
+import gallery from './components/gallery'
+import alltransaction from './components/alltransaction'
+import transactionsearch from './components/transactionsearch'
+import yearlypayslip from './components/yearlypayslip'
+import profilepage from './components/profilepage'
 
 
 Vue.use(VueRouter);
@@ -30,7 +35,7 @@ const routes = [
     { path: '/', component: Register },
     { path: '/login', component: Login },
     { path: '/home', component: Home },
-    { path: '/otp', component: otp },
+    { path: '/about', component: aboutus },
     { path: '/pass', component: password },
     { path: '/profile', component: Profile, name: 'Profile' },
     { path: '/dash', component: Dashboard },
@@ -41,14 +46,21 @@ const routes = [
     { path: '/Payslip', component: Payslip },
     { path: '/Download', component: Download },
     { path: '/set', component: LoanSet },
-    { path: '/setsal', component: SalaryInsert },
+    { path: '/sin', component: SalaryInsert },
     { path: '/add', component: adduser },
     { path: '/wreport', component: warehousereport },
     { path: '/win', component: warehousein },
     { path: '/flist', component: farmerlist },
     { path: '/repay', component: repayment, name: 'repayment' },
     { path: '/wagestrans', component: wagestransaction },
-    { path: '/calcwages', component: calculatewages }
+    { path: '/salarytrans', component: salarytransaction },
+    { path: '/gallery', component: gallery },
+    { path: '/alltrans', component: alltransaction},
+    { path: '/search', component: transactionsearch},
+    { path: '/ypayslip', component: yearlypayslip},
+    { path: '/profilepage', component: profilepage}
+    
+    
 
 ]
 

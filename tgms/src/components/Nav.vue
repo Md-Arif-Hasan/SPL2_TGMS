@@ -14,9 +14,6 @@
             </router-link>
           </li>
 
-          <li class="nav-item">
-            <router-link to="/profile" class="nav-link"> Profile </router-link>
-          </li>
 
           <li class="nav-item">
             <router-link to="/attend" class="nav-link">
@@ -42,6 +39,7 @@
             <router-link to="/flist" class="nav-link"> Farmer List</router-link>
           </li>
 
+          
           <li class="nav-item">
             <router-link to="/wagestrans" class="nav-link">
               Wages Transaction

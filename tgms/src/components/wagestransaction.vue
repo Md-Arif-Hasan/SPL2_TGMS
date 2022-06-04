@@ -1,9 +1,11 @@
 <template>
+
   <div class="limiter">
+    <nav-2></nav-2>
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/img-01.png" alt="IMG" />
+          <img src="../assets/taka.jpg" alt="IMG" />
         </div>
 
         <form
@@ -66,26 +68,21 @@
             
              -->
 
-          <div>
-            <div>
-              <div>
-                <select v-model="month" name="languages" class="input100">
-                  <option value="1">January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
-                </select>
-              </div>
-            </div>
-          </div>
+          <select v-model="month" name="languages" class="input100">
+      
+            <option value="1" selected>January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
 
           <br />
 
@@ -105,8 +102,15 @@
 
 <script>
 import axios from "axios";
+import Nav2 from "./Nav2.vue";
+
+
 export default {
+  components: { Nav2 },
   name: "wagestransaction",
+  comments:{
+    Nav2
+  },
 
   data() {
     return {
@@ -219,10 +223,10 @@ textarea {
   border: none;
 }
 
-textarea:focus,
+/* textarea:focus,
 input:focus {
   border-color: transparent !important;
-}
+} */
 
 input:focus::-webkit-input-placeholder {
   color: transparent;
@@ -277,7 +281,7 @@ textarea:-ms-input-placeholder {
 }
 
 /*---------------------------------------------*/
-button {
+/* button {
   outline: none !important;
   border: none;
   background: transparent;
@@ -289,7 +293,7 @@ button:hover {
 
 iframe {
   border: none !important;
-}
+} */
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
@@ -297,14 +301,14 @@ iframe {
   font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #999999;
+  color: #000000;
 }
 
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #666666;
+  color: #000000;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -315,8 +319,9 @@ iframe {
   margin: 0 auto;
 }
 
-.container-login100 {
+ .container-login100 {
   width: 100%;
+  height: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -327,12 +332,22 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-}
+  background: #7fac8d;
+
+
+  background-image: url("../assets/leaf-55.jpg");
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+   /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
+  background: -o-linear-gradient(-135deg, #1874b1, #4158d0);
+  background: -moz-linear-gradient(-135deg, #0c0c0c, #4158d0);
+  background: linear-gradient(-135deg, #222122, #a7a9b1); */
+} 
 
 .wrap-login100 {
   width: 960px;

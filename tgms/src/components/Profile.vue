@@ -12,10 +12,17 @@
               <p>
                 I provide services for our company. It's one of the biggest
                 company of North bangle. My passion is to dedicatedly my job and
-                gather experiences through the meaningful interactions. 1. Make
-                transaction 2. Teanaaction histroy 3. alart box all page 4.
-                password varify 5. all varifcation( otp, pass) 6. User profile
-                7. Yearly payslip 8. Transaction history search
+                gather experiences through the meaningful interactions. 1.
+                Logout 3. alart box all page 4. password varify 5. all
+                varifcation( otp, pass)
+                <b> 12. individual Profile (j login ache) </b>
+                kalker first kaj - admin vs employee design ----------(payslip +
+                yearly payslip + profile page ) ----- kon id diye kalke identify
+                kortesi -fix kore fela.
+
+                ### About us page
+
+                <b> database thik kore sobgula table</b>
               </p>
 
               <p>
