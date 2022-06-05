@@ -1,4 +1,3 @@
-
 <template>
   <div class="limiter">
     <div class="container-login100">
@@ -39,7 +38,6 @@
   </div>
 </template>
 
-
 <!--
 <template>
 <div>
@@ -63,8 +61,6 @@
 
 </template>
 -->
-
-
 
 <script>
 import axios from "axios";
@@ -90,13 +86,12 @@ export default {
           console.log(res);
         });
 
-      this.$router.push("/login");
+      this.$router.push("/");
       console.log("Succesfull");
     },
   },
 };
 </script>
-
 
 <!--
 
@@ -114,9 +109,6 @@ export default {
 
 </style>
 -->
-
-
-
 
 <style scoped>
 /*//////////////////////////////////////////////////////////////////

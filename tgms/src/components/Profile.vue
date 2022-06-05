@@ -12,17 +12,15 @@
               <p>
                 I provide services for our company. It's one of the biggest
                 company of North bangle. My passion is to dedicatedly my job and
-                gather experiences through the meaningful interactions. 1.
-                Logout 3. alart box all page 4. password varify 5. all
-                varifcation( otp, pass)
-                <b> 12. individual Profile (j login ache) </b>
-                kalker first kaj - admin vs employee design ----------(payslip +
-                yearly payslip + profile page ) ----- kon id diye kalke identify
-                kortesi -fix kore fela.
-
-                ### About us page
+                gather experiences through the meaningful interactions. 3. alart
+                box all page y 5. all varifcation( otp, pass)
+                <b> </b>
+                (payslip == ID box ta baad jabe employeer jonno. local storage
+                theke pathanor lagbe0 yearly payslip )
 
                 <b> database thik kore sobgula table</b>
+
+                15. farmer dashboard, profile
               </p>
 
               <p>
@@ -84,11 +82,7 @@
           </div>
           <div class="col-lg-6">
             <div class="about-avatar">
-              <img
-                src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                title=""
-                alt=""
-              />
+              <img src="../assets/avatar5.png" title="" alt="" />
             </div>
           </div>
         </div>

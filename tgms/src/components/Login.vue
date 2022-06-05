@@ -18,7 +18,7 @@
           >
             <input
               class="input100"
-              type="number"
+              type="text"
               name="ID"
               v-model="id"
               placeholder="ID"
@@ -71,9 +71,6 @@
   </div>
 </template>
 
-
-
-
 <!--
 
 <script>
@@ -112,9 +109,6 @@ export default {
 </script>
 -->
 
-
-
-
 <script>
 import axios from "axios";
 export default {
@@ -140,19 +134,19 @@ export default {
 
       localStorage.setItem("id", this.id);
 
-      if (this.id == 1 || this.id == 2 || this.id == 3) {
-        this.$router.push("/dash");
-      } else {
+      if (this.id[0] == 1 && response.data[0].status == 1) {
         this.$router.push("/home");
+      } else if (this.id[0] == 2 && response.data[0].status == 1) {
+        this.$router.push("/home2");
+      } else if (this.id[0] == 3 && response.data[0].status == 1) {
+        this.$router.push("/home3");
+      } else {
+        alert("Please enter all fileds");
       }
     },
   },
 };
 </script>
-
-
-
-
 
 <style scoped>
 /*//////////////////////////////////////////////////////////////////
@@ -623,8 +617,6 @@ iframe {
   }
 }
 </style>
-
-
 
 <!--
 

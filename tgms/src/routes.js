@@ -27,13 +27,18 @@ import alltransaction from './components/alltransaction'
 import transactionsearch from './components/transactionsearch'
 import yearlypayslip from './components/yearlypayslip'
 import profilepage from './components/profilepage'
+import otp from './components/otp'
+
+import home2 from './components/home2'
+import home3 from './components/home3'
+import farmerprofile from './components/farmerprofile'
 
 
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: Register },
-    { path: '/login', component: Login },
+    { path: '/register', component: Register },
+    { path: '/', component: Login },
     { path: '/home', component: Home },
     { path: '/about', component: aboutus },
     { path: '/pass', component: password },
@@ -55,12 +60,15 @@ const routes = [
     { path: '/wagestrans', component: wagestransaction },
     { path: '/salarytrans', component: salarytransaction },
     { path: '/gallery', component: gallery },
-    { path: '/alltrans', component: alltransaction},
-    { path: '/search', component: transactionsearch},
-    { path: '/ypayslip', component: yearlypayslip},
-    { path: '/profilepage', component: profilepage}
-    
-    
+    { path: '/alltrans', component: alltransaction },
+    { path: '/search', component: transactionsearch },
+    { path: '/ypayslip', component: yearlypayslip },
+    { path: '/profilepage', component: profilepage },
+    { path: '/home2', component: home2 },
+    { path: '/home3', component: home3 },
+    { path: '/otp', component: otp },
+
+    { path: '/fprofile', component: farmerprofile }
 
 ]
 

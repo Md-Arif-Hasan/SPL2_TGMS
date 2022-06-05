@@ -4,8 +4,11 @@
 
     <h1>Employee list</h1>
     <br />
+
     <button>
-      <router-link to="/" class="nav-link"> Add Employee </router-link>
+      <router-link to="/" class="nav-link fa-1x" id="button">
+        Add Employee
+      </router-link>
     </button>
 
     <!-- <Profile v-bind:info="info"> </Profile> -->
@@ -122,13 +125,13 @@ body {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0);
   border-radius: 0.25rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
-    0 2px 6px 0 rgb(206 206 238 / 54%);
+  box-shadow: 0 2px 6px 0 rgba(8, 8, 8, 0.65),
+    0 2px 6px 0 rgba(19, 81, 114, 0.54);
 }
 
 element.style {
@@ -155,5 +158,13 @@ element.style {
 }
 .bg-linkedin {
   background-color: #0976b4 !important;
+}
+
+.container {
+  padding-top: 50px;
+}
+#button {
+  padding-left: 50px;
+  font: bold;
 }
 </style>

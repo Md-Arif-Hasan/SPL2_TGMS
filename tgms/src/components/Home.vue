@@ -1,4 +1,3 @@
-
 <template>
   <div class="bg col-sm-12 page">
     <!-- Vertical navbar -->
@@ -24,35 +23,19 @@
 
       <ul class="nav flex-column mb-0">
         <li class="nav-item">
-          <a href="/" class="nav-link text-light font-italic">
-            <i class="fa fa-th-large teal-color mr-3 text-primary fa-fw"></i>
-            Register
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a href="/login" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Log in
-          </a>
-        </li>
-
-           <li class="nav-item">
           <a href="/profilepage" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             Profile
           </a>
         </li>
 
-        
-           <li class="nav-item">
+        <li class="nav-item">
           <a href="/about" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             About Us
           </a>
         </li>
 
-        
         <li class="nav-item">
           <a href="/gallery" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
@@ -91,21 +74,14 @@
         <li class="nav-item">
           <a href="/payslip" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-           Monthly Payslip
-          </a>
-        </li>
-
-         <li class="nav-item">
-          <a href="/payslip" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Yearly Payslip
+            Monthly Payslip
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/files" class="nav-link text-light font-italic">
+          <a href="/ypayslip" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            File Upload
+            Yearly Payslip
           </a>
         </li>
 
@@ -116,15 +92,14 @@
           </a>
         </li>
 
-
-              <li class="nav-item">
+        <li class="nav-item">
           <a href="/sin" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             Insert Salary
           </a>
         </li>
 
-            <li class="nav-item">
+        <li class="nav-item">
           <a href="/salarytrans" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             Salary Transaction
@@ -138,20 +113,21 @@
           </a>
         </li>
 
-            <li class="nav-item">
+        <li class="nav-item">
           <a href="/alltrans" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             Transaction History
           </a>
         </li>
 
-          <li class="nav-item">
+        <!-- 
+        <li class="nav-item">
           <a href="/search" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-           Search Transaction 
+            Search Transaction
           </a>
         </li>
-        
+      -->
 
         <li class="nav-item">
           <a href="/win" class="nav-link text-light font-italic">
@@ -166,15 +142,30 @@
             Inventory Report
           </a>
         </li>
+
+        <br />
+
+        <li>
+          <button
+            @click="
+              () => {
+                logout();
+              }
+            "
+          >
+            Logout
+          </button>
+        </li>
       </ul>
 
+      <!--
       <p
         class="text-light font-weight-bold text-uppercase px-3 small py-4 mb-0"
       >
         Charts
       </p>
 
-      <ul class="nav flex-column mb-0">
+     <ul class="nav flex-column mb-0">
         <li class="nav-item">
           <a href="#" class="nav-link text-light font-italic">
             <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
@@ -199,7 +190,7 @@
             Line charts
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
     <!-- End vertical navbar -->
 
@@ -226,7 +217,7 @@
             <u>Bootstrapious</u></a
           >
         </p> -->
-
+        <img id="chobi" src="../assets/bg-2.jpg" />
         <!-- <div class="separator" ></div>
 
         <div class="row">
@@ -278,7 +269,7 @@
 
         <div class="separator"></div>
 
-        <img src="../assets/bg-2.jpg" />
+        <img id="chobi" src="../assets/bg-2.jpg" />
 
         <div class="col-sm-12">
           <div class="col-lg-12">
@@ -318,23 +309,46 @@
             </p>
           </div>
         </div>
+        <img src="../assets/bg-1.jpg" />
+        <br />
+        <br />
+        <p class="lead">
+          SULTAN Tea owns one tea garden by named ‘Green field tea estate’ which
+          is located at Nitaldoba very close to Indian border. It is in Paria
+          union under Baliadangi upazila,Thakurgaon. Besides that we have
+          contract farmers. In all, we have tea garden on 400 acres of land.
+          Skilled tea labors are hand planting regularly six day’s in a week
+          between March to December. The tea leaves are of very good quality.
+          After planting leaves transfers to factory very swiftly by own vehicle
+          to ensure best performance of tea.
+        </p>
+        <br />
+        <br />
+
+        <img src="../assets/freepik-1.jpg" />
+
+        <img src="../assets/freepik-5.jpg" />
+
+        <br />
+        <br />
+
+        <p class="lead">
+          SULTAN Tea owns one tea garden by named ‘Green field tea estate’ which
+          is located at Nitaldoba very close to Indian border. It is in Paria
+          union under Baliadangi upazila,Thakurgaon. Besides that we have
+          contract farmers. In all, we have tea garden on 400 acres of land.
+          Skilled tea labors are hand planting regularly six day’s in a week
+          between March to December. The tea leaves are of very good quality.
+          After planting leaves transfers to factory very swiftly by own vehicle
+          to ensure best performance of tea.
+        </p>
+        <br />
+        <br />
       </div>
     </div>
     <!-- End demo content -->
 
     <div class="separator"></div>
-
-
-<!-- <div>
-
-        <img src="../assets/freepik-4.jpg" alt="Mountains" style="height:100% " />
-        <div>
-          Hello
-        </div>
-
-</div>
-  -->
-  
 
     <footer class="footer">
       <div class="container">
@@ -342,10 +356,9 @@
           <div class="footer-col">
             <h4>company</h4>
             <ul>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">our services</a></li>
+              <li><a href="/about">about us</a></li>
+              <li><a href="/gallery">Gallery</a></li>
               <li><a href="#">privacy policy</a></li>
-              <li><a href="#">affiliate program</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -354,8 +367,6 @@
               <li><a href="#">FAQ</a></li>
               <li><a href="#">shipping</a></li>
               <li><a href="#">returns</a></li>
-              <li><a href="#">order status</a></li>
-              <li><a href="#">payment options</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -364,16 +375,17 @@
               <li><a href="#">watch</a></li>
               <li><a href="#">bag</a></li>
               <li><a href="#">shoes</a></li>
-              <li><a href="#">dress</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/SultanTeaBangladesh"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://sultantea.com.bd/"
+                ><i class="fab fa-google"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -381,6 +393,18 @@
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push("/");
+      console.log("Succesfull");
+    },
+  },
+};
+</script>
 
 <style scoped>
 /*
@@ -612,5 +636,9 @@ ul {
   content: "";
   clear: both;
   display: table;
+}
+
+button {
+  color: #e91e63;
 }
 </style>
