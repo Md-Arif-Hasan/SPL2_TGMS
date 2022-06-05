@@ -14,7 +14,7 @@
         >
           <span class="login100-form-title"> Yearly Payslip </span>
 
-          <div
+          <!-- <div
             class="wrap-input100 validate-input"
             data-validate="Valid email is required: ex@abc.xyz"
           >
@@ -25,7 +25,7 @@
               v-model="employeeid"
               placeholder="ID"
             />
-          </div>
+          </div> -->
 
           <div>
 
@@ -79,7 +79,7 @@ export default {
     getPdfLink() {
       return (
         "http://localhost/php_test/yearlypayslip.php?employeeid=" +
-        this.employeeid +
+         localStorage.getItem("id") +
         "&year=" +
         this.year
       );

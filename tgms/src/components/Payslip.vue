@@ -9,7 +9,7 @@
         <form class="login100-form validate-form">
           <span class="login100-form-title"> Payslip </span>
 
-          <div
+          <!-- <div
             class="wrap-input100 validate-input"
             data-validate="Valid email is required: ex@abc.xyz"
           >
@@ -20,11 +20,11 @@
               v-model="employeeid"
               placeholder="ID"
             />
-            <!-- <span class="focus-input100"></span>
+         <span class="focus-input100"></span>
             <span class="symbol-input100">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span> -->
-          </div>
+            </span> 
+          </div> -->
 
         
 
@@ -32,7 +32,7 @@
             <div>
               <div>
                 <select v-model="month" name="languages" class="input100">
-                  <option value="1">January</option>
+                  <option value="1"  selected>January</option>
                   <option value="2">February</option>
                   <option value="3">March</option>
                   <option value="4">April</option>
@@ -74,15 +74,16 @@ export default {
 
   data() {
     return {
-      employeeid: "",
-      month: "",
+      employeeid:"",
+      month: ""
     };
   },
   methods: {
     getPdfLink() {
+      console.log('yes'+ this.employeeid);
       return (
-        "http://localhost/php_test/attendance.php?id=" +
-        this.employeeid +
+        "http://localhost/php_test/attendance.php?id=" + 
+        localStorage.getItem("id") +
         "&month=" +
         this.month
       );
