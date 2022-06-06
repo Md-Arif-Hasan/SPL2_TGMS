@@ -26,28 +26,6 @@
 
         <form @submit.prevent="handleSubmit">
           <div class="row">
-            <!-- TYpe -->
-
-            <!--Date-->
-            <!-- <div class="input-group col-lg-12 mb-4">
-              <div class="input-group-prepend">
-                <span
-                  class="input-group-text bg-white px-4 border-md border-right-0"
-                >
-                  <i class="fa fa-user text-muted"></i>
-                </span>
-              </div>
-              <input
-                id="Name"
-                type="date"
-                name="firstname"
-                v-model="date"
-                placeholder="Date"
-                class="form-control bg-white border-left-0 border-md"
-              />
-            </div> -->
-
-            <!--  Name -->
             <div class="input-group col-lg-12 mb-4">
               <div class="input-group-prepend">
                 <span

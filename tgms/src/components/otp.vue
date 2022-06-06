@@ -3,7 +3,7 @@
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/img-01.png" alt="IMG" />
+          <img src="../assets/otp.jpg" alt="IMG" />
         </div>
 
         <form
@@ -37,65 +37,6 @@
     </div>
   </div>
 </template>
-
-<!--
-<template>
-  <div>
-    <div class="contact-form">
-      <h3>OTP</h3>
-
-      <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <label> Enter OTP </label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="token"
-            placeholder="OTP"
-          />
-        </div>
-
-        <button class="btn-primary btn-block" input type="submit">
-          Submit
-        </button>
-      </form>
-    </div>
-  </div>
-</template>
-
-
-
-<script>
-import axios from "axios";
-
-export default {
-  name: "otp",
-
-  data() {
-    return {
-      token: "",
-    };
-  },
-
-  methods: {
-    async handleSubmit() {
-      //console.log(this.token);
-      await axios
-        .post("/otpverify.php", {
-          token: this.token,
-          id: localStorage.getItem("id"),
-        })
-        .then((res) => {
-          console.log(res);
-        });
-
-      this.$router.push("/pass");
-      console.log("Succesfull");
-    },
-  },
-};
-</script>
--->
 
 <script>
 import axios from "axios";
@@ -327,11 +268,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #32744e;
+
+  /* background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 
 .wrap-login100 {
@@ -460,7 +402,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
+  color: #2c2f2c;
   padding-left: 28px;
 }
 
@@ -488,7 +430,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #0a0a0a;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

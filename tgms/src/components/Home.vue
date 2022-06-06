@@ -6,7 +6,7 @@
       <div class="py-4 px-3 mb-4 bg-dark">
         <!-- <div class="media d-flex align-items-center"> -->
         <div class="media-body" id="logo">
-          <h4 class="m-0 text-light font-bold">Sultan Tea Garden</h4>
+          <h4 class="m-0 text-success font-bold">Sultan Tea Garden</h4>
         </div>
 
         <!-- </div> -->
@@ -21,12 +21,16 @@
       <ul class="nav flex-column mb-0">
         <li class="nav-item">
           <a href="/profilepage" class="nav-link text-light font-bold">
-            <i class="fa fa-address-card text-primary fa-fw"></i>
-            Profile
+            <b>
+              <span style="color: #00ff00">
+                <i class="fa text-primary fa-fw"></i>
+                Profile</span
+              >
+            </b>
           </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a
             href="/about"
             class="nav-link text-light font-italic font-size:10px"
@@ -34,12 +38,14 @@
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             About Us
           </a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
-          <a href="/gallery" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Gallery
+          <a href="/gallery" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Gallery</span
+            >
           </a>
         </li>
 
@@ -51,72 +57,92 @@
         </li> -->
 
         <li class="nav-item">
-          <a href="/emplist" class="nav-link text-light font-italic">
-            <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-            Employee List
+          <a href="/emplist" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Employee list</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/flist" class="nav-link text-light font-italic">
-            <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-            Farmer List
+          <a href="/flist" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Farmer list</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/attend" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Attendance
+          <a href="/attend" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Attendance</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/adminpayslip" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Monthly Payslip
+          <a href="/adminpayslip" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Monthly payslip</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/ypayslip" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Yearly Payslip
+          <a href="/ypayslip" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Yearly payslip</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/download" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Application Download
+          <a href="/download" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Application download</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/sin" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Insert Salary
+          <a href="/sin" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Salary insert
+            </span>
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/salarytrans" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Salary Transaction
+          <a href="/salarytrans" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Salary transaction</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/wagestrans" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Wages Transaction
+          <a href="/wagestrans" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Wages Transaction</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/alltrans" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Transaction History
+          <a href="/alltrans" class="nav-link text-light font-bold">
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Transaction history</span
+            >
           </a>
         </li>
 
@@ -131,15 +157,19 @@
 
         <li class="nav-item">
           <a href="/win" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Warehouse Insert
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Warehouse insert</span
+            >
           </a>
         </li>
 
         <li class="nav-item">
           <a href="/wreport" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            Inventory Report
+            <span style="color: #00ff00">
+              <i class="fa text-primary fa-fw"></i>
+              Inventory report</span
+            >
           </a>
         </li>
 
@@ -376,10 +406,10 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  border-style: groove;
+  border-style: rgb(44, 15, 15);
   box-shadow: 3px 3px 10px rgba(95, 92, 92, 0.1);
   transition: all 0.4s;
-  background-color: #161414;
+  background-color: #080808;
 }
 
 .page-content {
@@ -487,7 +517,7 @@ ul {
 }
 .footer-col h4 {
   font-size: 18px;
-  color: #ffffff;
+  color: #1c1b1b;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -509,15 +539,15 @@ ul {
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
-  color: #ffffff;
+  color: #161414;
   text-decoration: none;
   font-weight: 300;
-  color: #bbbbbb;
+  color: #131212;
   display: block;
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color: #121111;
   padding-left: 8px;
 }
 .footer-col .social-links a {
@@ -529,7 +559,7 @@ ul {
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #1e1d1d;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
@@ -569,5 +599,10 @@ ul {
   content: "";
   clear: both;
   display: table;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  ffont-weight: bold;
 }
 </style>

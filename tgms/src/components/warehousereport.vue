@@ -1,3 +1,5 @@
+<!--
+
 <template>
   <div class="limiter">
     <div class="container-login100">
@@ -19,42 +21,6 @@
             </span>
           </div>
 
-          <!-- <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          >
-            <input
-              class="input100"
-              type="date"
-              
-              v-model="date"
-              placeholder="Date"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-
-        <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          > 
-
-            <input
-              class="input100"
-              type="radio"
-              name="status"
-              v-model="status"
-              value="Yes"
-            /> 
-
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="1" />
-          <label for="html"> YES </label><br />
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="0" />
-            <label for="html"> NO </label><br />
-            
-             -->
 
           <div class="row">
             <div class="col-sm-3">
@@ -77,16 +43,60 @@
             </div>
           </div>
 
-          <!-- <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div> -->
+  
 
           <div>
             <button>
               <a :href="getPdfLink()" class="btn btn-primary">Submit</a>
             </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+-->
+
+<template>
+  <div class="bg">
+    <Nav2></Nav2>
+    <div class="container-login100">
+      <div class="wrap-login100">
+        <div class="login100-pic js-tilt" data-tilt>
+          <img src="../assets/logo-3.png" alt="IMG" />
+        </div>
+
+        <form
+          class="login100-form validate-form"
+          @submit.prevent="handleSubmit"
+        >
+          <span class="login100-form-title">Salary Transaction </span>
+
+          <select
+            v-model="month"
+            name="languages"
+            id="languages"
+            class="input100"
+          >
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+          <br />
+
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">Submit</button>
           </div>
         </form>
       </div>

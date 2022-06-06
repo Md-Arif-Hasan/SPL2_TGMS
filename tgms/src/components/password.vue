@@ -3,7 +3,7 @@
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/img-01.png" alt="IMG" />
+          <img src="../assets/pass.jpg" alt="IMG" />
         </div>
 
         <form
@@ -148,7 +148,7 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #57b846;
+  color: #3a3e3a;
 }
 
 /*---------------------------------------------*/
@@ -294,11 +294,11 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #32744e;
+  /* background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 
 .wrap-login100 {
@@ -379,7 +379,7 @@ iframe {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(87, 184, 70, 0.8);
+  color: rgba(26, 27, 25, 0.8);
 }
 
 .input100:focus + .focus-input100 {
@@ -427,7 +427,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
+  color: #070807;
   padding-left: 28px;
 }
 
@@ -455,7 +455,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #373837;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

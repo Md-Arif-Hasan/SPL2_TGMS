@@ -9,24 +9,6 @@
         <form class="login100-form validate-form">
           <span class="login100-form-title"> Payslip </span>
 
-          <!-- <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <input
-              class="input100"
-              type="number"
-              name="ID"
-              v-model="employeeid"
-              placeholder="ID"
-            />
-         <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span> 
-          </div> -->
-
-          <!-- <div> -->
           <select
             v-model="month"
             name="languages"
@@ -47,27 +29,6 @@
             <option value="12">December</option>
           </select>
           <!-- </div> -->
-
-          <div>
-            <div>
-              <div>
-                <select v-model="month" name="languages" class="input100">
-                  <option value="1" selected>January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
-                </select>
-              </div>
-            </div>
-          </div>
 
           <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">

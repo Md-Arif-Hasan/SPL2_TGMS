@@ -296,9 +296,9 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #09f50d;
+  background: #f7f7f7;
 
-  background-image: url("../assets/garden-4.jpg");
+  /* background-image: url("../assets/garden-4.jpg"); */
   height: 100%;
 
   /* Center and scale the image nicely */
@@ -315,9 +315,9 @@ iframe {
 .wrap-login100 {
   width: 960px;
   background: rgb(
-    95,
-    176,
-    124
+    102,
+    146,
+    119
   ); /* BOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   border-radius: 10px;
   overflow: hidden;

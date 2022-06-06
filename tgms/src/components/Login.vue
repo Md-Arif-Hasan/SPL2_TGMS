@@ -3,7 +3,7 @@
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/img-01.png" alt="IMG" />
+          <img src="../assets/sign.jpg" alt="IMG" />
         </div>
 
         <form
@@ -186,7 +186,7 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #57b846;
+  color: #286484;
 }
 
 /*---------------------------------------------*/
@@ -332,11 +332,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #32744e;
+  /* background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
   background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
   background: linear-gradient(-135deg, #c850c0, #4158d0);
+} */
 }
 
 .wrap-login100 {
@@ -465,7 +466,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
+  color: #6e716d;
   padding-left: 28px;
 }
 
@@ -493,7 +494,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #282827;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -617,97 +618,3 @@ iframe {
   }
 }
 </style>
-
-<!--
-
-<style scoped>
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
- body:before {
-	content: '';
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-image: url(https://i.postimg.cc/8cf6v1rk/1.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	background-size: cover;
-	-webkit-filter: blur(10px);
-	-moz-filter: blur(10px);
-	filter: blur(10px);
-} 
-.contact-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 350px;
-  padding: 80px 40px;
-  background: rgba(0, 0, 0, 0.5);
-}
-.avatar {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  top: calc(-80px / 2);
-  left: 190px;
-}
-.contact-form h2 {
-  margin: 0;
-  padding: 0 0 20px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-.contact-form p {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: #fff;
-}
-.contact-form input {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.contact-form input[type="email"] {
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  color: #fff;
-  font-size: 16px;
-}
-.contact-form input[type="submit"] {
-  height: 30px;
-  color: #fff;
-  font-size: 15px;
-  background: red;
-  cursor: pointer;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  margin-top: 15%;
-}
-.contact-form a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-}
-input[type="checkbox"] {
-  width: 20%;
-}
-</style>
-
--->
