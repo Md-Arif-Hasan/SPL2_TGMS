@@ -9,7 +9,7 @@
         <form class="login100-form validate-form">
           <span class="login100-form-title"> Payslip </span>
 
-          <div
+          <!-- <div
             class="wrap-input100 validate-input"
             data-validate="Valid email is required: ex@abc.xyz"
           >
@@ -20,34 +20,33 @@
               v-model="employeeid"
               placeholder="ID"
             />
-            <!-- <span class="focus-input100"></span>
+         <span class="focus-input100"></span>
             <span class="symbol-input100">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span> -->
-          </div>
+            </span> 
+          </div> -->
 
-        
-
-          <div>
-            <div>
-              <div>
-                <select v-model="month" name="languages" class="input100">
-                  <option value="1">January</option>
-                  <option value="2">February</option>
-                  <option value="3">March</option>
-                  <option value="4">April</option>
-                  <option value="5">May</option>
-                  <option value="6">June</option>
-                  <option value="7">July</option>
-                  <option value="8">August</option>
-                  <option value="9">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12">December</option>
-                </select>
-              </div>
-            </div>
-          </div>
+          <!-- <div> -->
+          <select
+            v-model="month"
+            name="languages"
+            id="languages"
+            class="input100"
+          >
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <!-- </div> -->
 
           <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">
@@ -75,56 +74,24 @@ export default {
   data() {
     return {
       employeeid: "",
-      month: "",
+      month: 1,
     };
   },
   methods: {
     getPdfLink() {
+      console.log("yes" + this.employeeid);
       return (
         "http://localhost/php_test/attendance.php?id=" +
-        this.employeeid +
+        localStorage.getItem("id") +
         "&month=" +
         this.month
       );
     },
   },
-
-  //   mounted () {
-  //   axios
-  //
-
-  //     .then(response => {
-  //   console.log(response);
-  //   const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
-  //   this.invoicePDF = downloadUrl
-  //   // this.downloadFile()
-  // })
-
-  // // methods: {
-  //   async handleSubmit() {
-  //     //   localStorage.clear();
-  //     //console.log(this.employeeid +" "+ this.date+" " + this.status);
-
-  //     await axios.get("attendance.php", {
-
-  //       employeeid: this.employeeid,
-  //       month: this.month
-  //     });
-
-  //     //localStorage.setItem('token', response.data.token);
-  //    // localStorage.setItem("sid", this.id);
-  //   },
-  // },
 };
 </script>
 
 <style scoped>
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
 * {
   margin: 0px;
   padding: 0px;

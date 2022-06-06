@@ -15,12 +15,7 @@
                 gather experiences through the meaningful interactions. 3. alart
                 box all page y 5. all varifcation( otp, pass)
                 <b> </b>
-                (payslip == ID box ta baad jabe employeer jonno. local storage
-                theke pathanor lagbe0 yearly payslip )
-
-                <b> database thik kore sobgula table</b>
-
-                15. farmer dashboard, profile
+                20. nav bar thik kora lagbe
               </p>
 
               <p>

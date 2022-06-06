@@ -1,4 +1,3 @@
-
 <template>
   <div class="limiter">
     <div class="container-login100">
@@ -98,7 +97,6 @@ export default {
 </script>
 -->
 
-
 <script>
 import axios from "axios";
 
@@ -114,23 +112,21 @@ export default {
   methods: {
     async handleSubmit() {
       //console.log(this.token);
-      await axios
-        .post("/otpverify.php", {
-          token: this.token,
-          id: localStorage.getItem("id"),
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      const response = await axios.post("/otpverify.php", {
+        token: this.token,
+        id: localStorage.getItem("id"),
+      });
 
-      this.$router.push("/pass");
-      console.log("Succesfull");
+      if (response.data[0].status == 1) {
+        alert("Data saved successfully");
+        this.$router.push("/pass");
+      } else {
+        alert("wrong OTP");
+      }
     },
   },
 };
 </script>
-
-
 
 <!--
 <style scoped>
@@ -146,10 +142,6 @@ export default {
 }
 </style>
 -->
-
-
-
-
 
 <style scoped>
 /*//////////////////////////////////////////////////////////////////

@@ -141,7 +141,7 @@ export default {
       } else if (this.id[0] == 3 && response.data[0].status == 1) {
         this.$router.push("/home3");
       } else {
-        alert("Please enter all fileds");
+        alert(" Wrong Credentials!");
       }
     },
   },

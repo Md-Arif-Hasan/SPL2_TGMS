@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <nav-2></nav-2>
@@ -57,7 +55,6 @@
   </div>
 </template>
 
-
 <script>
 import axios from "axios";
 import Nav2 from "./Nav2.vue";
@@ -78,26 +75,23 @@ export default {
   methods: {
     async handleSubmit() {
       console.log("ererwr");
-      await axios
-        .post("/fileapproval.php", {
-          id: this.id,
-          name: this.name,
-          mobile: this.mobile,
-          amount: this.amount,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      const response = await axios.post("/fileapproval.php", {
+        id: this.id,
+        name: this.name,
+        mobile: this.mobile,
+        amount: this.amount,
+      });
 
-      console.log("Succesfull");
-      //console.log(response);
+      if (response.data[0].status == 1) {
+        this.$router.push("/download");
+        console.log("Loan Set Succesfull");
+      } else {
+        alert("Failed! ");
+      }
     },
   },
 };
 </script>
-
-
-
 
 <style scoped>
 html {

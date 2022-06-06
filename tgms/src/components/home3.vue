@@ -33,7 +33,7 @@
         <li class="nav-item">
           <a href="/files" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            File Upload
+            Loan Application
           </a>
         </li>
         <br />

@@ -4,9 +4,9 @@
 
     <h1>Employee list</h1>
     <br />
-
+    <br />
     <button>
-      <router-link to="/" class="nav-link fa-1x" id="button">
+      <router-link to="/add" class="nav-link fa-1x" id="button">
         Add Employee
       </router-link>
     </button>
@@ -105,7 +105,11 @@ export default {
     deleteProfile(id) {
       console.log("hello");
       // return 'http://localhost/php_test/delete.php?id='+ this.inf.id ;
-      axios.post("/delete.php?id=" + id).then(this.fetchInfo());
+      const response = axios.post("/delete.php?id=" + id);
+
+      if (response.data[0].status == 1) {
+        alert(" User Deleted!");
+      }
     },
   },
 };

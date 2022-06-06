@@ -1,17 +1,12 @@
 <template>
   <div>
-    <h1>{{ info }}</h1>
     <!-- Navbar-->
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container">
           <!-- Navbar Brand -->
           <a href="#" class="navbar-brand">
-            <img
-              src="https://bootstrapious.com/i/snippets/sn-registeration/logo.svg"
-              alt="logo"
-              width="150"
-            />
+            <img src="../assets/logo-3.png" alt="logo" width="150" />
           </a>
         </div>
       </nav>
@@ -22,7 +17,7 @@
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
           <img
-            src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg"
+            src="../assets/payment.jpg"
             alt=""
             class="img-fluid mb-3 d-none d-md-block"
           />
@@ -56,12 +51,7 @@
             <div class="input-group col-lg-12 mb-4">
               <div class="input-group-prepend">
                 <span
-                  class="
-                    input-group-text
-                    bg-white
-                    px-4
-                    border-md border-right-0
-                  "
+                  class="input-group-text bg-white px-4 border-md border-right-0"
                 >
                   <i class="fa fa-user text-muted"></i>
                 </span>
@@ -76,11 +66,12 @@
               />
             </div>
 
-            <br />
-            <div class="container-login100-form-btn">
-              <button class="login100-form-btn">Repayment</button>
+            <div
+              class="container-login100-form-btn"
+              style="padding-left: 220px"
+            >
+              <button class="login100-form-btn">Register</button>
             </div>
-
             <!-- Already Registered -->
           </div>
         </form>
@@ -107,15 +98,17 @@ export default {
 
   methods: {
     async handleSubmit() {
-      await axios
-        .post("/repayment.php", {
-          id: this.info.employeeid,
-          amount: this.amount,
-        })
-        .then((res) => {
-          console.log(res);
-          this.$router.push("/flist");
-        });
+      const response = await axios.post("/repayment.php", {
+        id: this.info.employeeid,
+        amount: this.amount,
+      });
+
+      if (response.data[0].status == 1) {
+        this.$router.push("/flist");
+        alert("Repayment successful!");
+      } else {
+        alert("Repayment Failed! ");
+      }
     },
 
     // getPdfLink() {

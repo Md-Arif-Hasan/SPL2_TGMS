@@ -1,11 +1,10 @@
 <template>
-
-  <div class="limiter">
-    <nav-2></nav-2>
+  <div class="bg">
+    <Nav2></Nav2>
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/taka.jpg" alt="IMG" />
+          <img src="../assets/logo-3.png" alt="IMG" />
         </div>
 
         <form
@@ -25,52 +24,15 @@
               v-model="employeeid"
               placeholder="ID"
             />
-            <!-- <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span> -->
           </div>
 
-          <!-- <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
+          <select
+            v-model="month"
+            name="languages"
+            id="languages"
+            class="input100"
           >
-            <input
-              class="input100"
-              type="date"
-              
-              v-model="date"
-              placeholder="Date"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-
-        <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          > 
-
-            <input
-              class="input100"
-              type="radio"
-              name="status"
-              v-model="status"
-              value="Yes"
-            /> 
-
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="1" />
-          <label for="html"> YES </label><br />
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="0" />
-            <label for="html"> NO </label><br />
-            
-             -->
-
-          <select v-model="month" name="languages" class="input100">
-      
-            <option value="1" selected>January</option>
+            <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
             <option value="4">April</option>
@@ -87,7 +49,7 @@
           <br />
 
           <div class="container-login100-form-btn">
-            <button class="login100-form-btn">submit</button>
+            <button class="login100-form-btn">Submit</button>
           </div>
 
           <!-- <a class="txt2" href="/calcwages">
@@ -104,37 +66,39 @@
 import axios from "axios";
 import Nav2 from "./Nav2.vue";
 
-
 export default {
   components: { Nav2 },
   name: "wagestransaction",
-  comments:{
-    Nav2
+  comments: {
+    Nav2,
   },
 
   data() {
     return {
       employeeid: "",
-      month: "",
+      month: 1,
       tid: Math.floor(Math.random() * 100000) + 200000,
     };
   },
   methods: {
     async handleSubmit() {
-      await axios
-        .post("/wagestransaction.php", {
-          employeeid: this.employeeid,
-          month: this.month,
-          tid: this.tid,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      const response = await axios.post("/wagestransaction.php", {
+        employeeid: this.employeeid,
+        month: this.month,
+        tid: this.tid,
+      });
 
       localStorage.setItem("tid", this.tid);
 
       // this.$router.push("/calcwages");
-      console.log("Succesfull");
+      // console.log("Succesfull");
+
+      if (response.data[0].status == 1) {
+        alert("Wages sent successfully! ");
+        this.$router.push("/home");
+      } else {
+        alert("Send failed! ");
+      }
     },
   },
 };
@@ -178,7 +142,7 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #57b846;
+  color: #555655;
 }
 
 .special {
@@ -319,7 +283,7 @@ iframe {
   margin: 0 auto;
 }
 
- .container-login100 {
+.container-login100 {
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -332,10 +296,9 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #7fac8d;
+  background: #09f50d;
 
-
-  background-image: url("../assets/leaf-55.jpg");
+  background-image: url("../assets/garden-4.jpg");
   height: 100%;
 
   /* Center and scale the image nicely */
@@ -343,15 +306,19 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover;
 
-   /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
+  /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
   background: -o-linear-gradient(-135deg, #1874b1, #4158d0);
   background: -moz-linear-gradient(-135deg, #0c0c0c, #4158d0);
   background: linear-gradient(-135deg, #222122, #a7a9b1); */
-} 
+}
 
 .wrap-login100 {
   width: 960px;
-  background: #fff;
+  background: rgb(
+    95,
+    176,
+    124
+  ); /* BOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
   border-radius: 10px;
   overflow: hidden;
 
@@ -362,7 +329,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 177px 130px 33px 95px;
+  padding: 120px 130px 33px 95px; /* boxxxxxxxxxxxx sizeeeeeeeeeeeeeee */
 }
 
 /*------------------------------------------------------------------
@@ -427,7 +394,7 @@ iframe {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(87, 184, 70, 0.8);
+  color: rgba(15, 15, 15, 0.8);
 }
 
 .input100:focus + .focus-input100 {
@@ -475,7 +442,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
+  color: #1a708c;
   padding-left: 28px;
 }
 
@@ -503,7 +470,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #191a1b;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

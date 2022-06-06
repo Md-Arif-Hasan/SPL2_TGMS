@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h1>Apllication List</h1>
+    <h1>Application List</h1>
 
     <table id="customers">
       <tr>
-   
         <th>Employee Name</th>
         <th>Mobile Number</th>
         <th>File Name</th>
@@ -13,8 +12,6 @@
       </tr>
 
       <tr v-for="inf in info" :key="inf.sid">
-        
-
         <td>{{ inf.ename }}</td>
         <td>{{ inf.mobile }}</td>
         <td>{{ inf.name }}</td>
@@ -35,17 +32,16 @@
           <button>
             <router-link to="/set" class="nav-link"> Approved </router-link>
           </button>
-          
-               <button
-                  @click="
-                    () => {
-                      deleteProfile(inf.id);
-                    }
-                  "
-                >
-                  Reject
-                </button>
 
+          <button
+            @click="
+              () => {
+                deleteProfile(inf.id);
+              }
+            "
+          >
+            Reject
+          </button>
         </td>
       </tr>
 
@@ -65,31 +61,30 @@ import axios from "axios";
 export default {
   name: "Download",
 
-
   data() {
     return {
       info: "",
     };
   },
   mounted() {
-        this.fetchInfo();
+    this.fetchInfo();
   },
 
-methods: {
+  methods: {
     fetchInfo() {
-      axios.get("/fileview.php").then((response) => (this.info = response.data));
+      axios
+        .get("/fileview.php")
+        .then((response) => (this.info = response.data));
     },
 
-     deleteProfile(id) {
+    deleteProfile(id) {
       console.log("hello");
       // return 'http://localhost/php_test/delete.php?id='+ this.inf.id ;
-      axios.post("/deletefile.php?id="+id).then(this.fetchInfo());
+      axios.post("/deletefile.php?id=" + id).then(this.fetchInfo());
     },
-}
-}
+  },
+};
 </script>
-
-
 
 <!--
 
@@ -122,8 +117,6 @@ export default{
 </script>
 
 -->
-
-
 
 <style scoped>
 #customers {

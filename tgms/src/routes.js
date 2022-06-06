@@ -32,6 +32,7 @@ import otp from './components/otp'
 import home2 from './components/home2'
 import home3 from './components/home3'
 import farmerprofile from './components/farmerprofile'
+import adminpayslip from './components/adminpayslip'
 
 
 Vue.use(VueRouter);
@@ -68,7 +69,9 @@ const routes = [
     { path: '/home3', component: home3 },
     { path: '/otp', component: otp },
 
-    { path: '/fprofile', component: farmerprofile }
+    { path: '/fprofile', component: farmerprofile },
+    { path: '/adminpayslip', component: adminpayslip },
+
 
 ]
 

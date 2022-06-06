@@ -3,34 +3,34 @@
     <!-- Vertical navbar -->
 
     <div class="vertical-nav" id="sidebar">
-      <div class="py-4 px-3 mb-4 bg-light">
-        <div class="media d-flex align-items-center">
-          <div class="media-body" id="logo">
-            <h4 class="m-0 text-dark font-bold">SULTAN TEA GARDEN</h4>
-          </div>
-          <!-- <div>
-
-            <img src="../assets/bg-2.jpg" alt="Girl in a jacket" width="500" height="600">
-          </div> -->
+      <div class="py-4 px-3 mb-4 bg-dark">
+        <!-- <div class="media d-flex align-items-center"> -->
+        <div class="media-body" id="logo">
+          <h4 class="m-0 text-light font-bold">Sultan Tea Garden</h4>
         </div>
+
+        <!-- </div> -->
       </div>
 
-      <p
+      <!-- <p
         class="text-light font-weight-bold text-uppercase px-3 small pb-4 mb-0"
       >
         Main
-      </p>
+      </p> -->
 
       <ul class="nav flex-column mb-0">
         <li class="nav-item">
-          <a href="/profilepage" class="nav-link text-light font-italic">
-            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+          <a href="/profilepage" class="nav-link text-light font-bold">
+            <i class="fa fa-address-card text-primary fa-fw"></i>
             Profile
           </a>
         </li>
 
         <li class="nav-item">
-          <a href="/about" class="nav-link text-light font-italic">
+          <a
+            href="/about"
+            class="nav-link text-light font-italic font-size:10px"
+          >
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             About Us
           </a>
@@ -43,12 +43,12 @@
           </a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="/add" class="nav-link text-light font-italic">
             <i class="fa fa-photo-video mr-3 text-primary fa-fw"></i>
             Add User
           </a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
           <a href="/emplist" class="nav-link text-light font-italic">
@@ -72,7 +72,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="/payslip" class="nav-link text-light font-italic">
+          <a href="/adminpayslip" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
             Monthly Payslip
           </a>
@@ -88,7 +88,7 @@
         <li class="nav-item">
           <a href="/download" class="nav-link text-light font-italic">
             <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
-            File Download
+            Application Download
           </a>
         </li>
 
@@ -157,78 +157,13 @@
           </button>
         </li>
       </ul>
-
-      <!--
-      <p
-        class="text-light font-weight-bold text-uppercase px-3 small py-4 mb-0"
-      >
-        Charts
-      </p>
-
-     <ul class="nav flex-column mb-0">
-        <li class="nav-item">
-          <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
-            Area charts
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
-            Bar charts
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
-            Pie charts
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link text-light font-italic">
-            <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
-            Line charts
-          </a>
-        </li>
-      </ul> -->
     </div>
     <!-- End vertical navbar -->
 
     <!-- Page content holder -->
     <div>
       <div class="page-content p-5" id="content">
-        <!-- <button
-          id="sidebarCollapse"
-          type="button"
-          class="btn btn-light bg-black rounded-pill shadow-sm px-4 mb-4"
-        >
-          <i class="fa fa-bars mr-2"></i
-          ><small class="text-uppercase font-weight-bold">Toggle</small>
-        </button>
-
-        <h2 class="display-4 text-black">Bootstrap vertical nav</h2>
-        <p class="lead text-black mb-0">
-          Build a fixed sidebar using Bootstrap 4 vertical navigation and media
-          objects.
-        </p>
-        <p class="lead text-black">
-          Snippet by
-          <a href="https://bootstrapious.com/snippets" class="text-black">
-            <u>Bootstrapious</u></a
-          >
-        </p> -->
-        <img id="chobi" src="../assets/bg-2.jpg" />
-        <!-- <div class="separator" ></div>
-
-        <div class="row">
-          <div class="col-sm-4" style="background-color: darkcyan">
-            .col-sm-4
-          </div>
-          <div class="col-sm-4" style="background-color: green">.col-sm-4</div>
-          <div class="col-sm-4" style="background-color: slategray">
-            .col-sm-4
-          </div>
-        </div> -->
+        <img src="../assets/bg-2.jpg" />
 
         <div style="padding-top: 50px">
           <div class="col-sm-12 content">
@@ -266,8 +201,6 @@
             </div>
           </div>
         </div>
-
-        <div class="separator"></div>
 
         <img id="chobi" src="../assets/bg-2.jpg" />
 
@@ -354,11 +287,11 @@
       <div class="container">
         <div class="row">
           <div class="footer-col">
-            <h4>company</h4>
+            <h4></h4>
             <ul>
-              <li><a href="/about">about us</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="#">privacy policy</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -521,8 +454,8 @@ img {
   margin-left: 30px;
   margin-right: auto;
 
-  height: 500px;
-  width: 1400px;
+  height: 400px;
+  width: 950px;
   padding-left: 50px;
 }
 
@@ -546,7 +479,7 @@ ul {
 
 .footer {
   background-color: #161414;
-  padding: 70px 0;
+  padding: 10px 0;
 }
 .footer-col {
   width: 25%;
@@ -565,7 +498,7 @@ ul {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #e91e63;
+  background-color: #0d0d0d;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -601,7 +534,7 @@ ul {
 }
 .footer-col .social-links a:hover {
   color: #24262b;
-  background-color: #ffffff;
+  background-color: #272323;
 }
 
 /*responsive*/
@@ -636,9 +569,5 @@ ul {
   content: "";
   clear: both;
   display: table;
-}
-
-button {
-  color: #e91e63;
 }
 </style>

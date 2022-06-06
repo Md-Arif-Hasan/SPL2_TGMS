@@ -79,7 +79,7 @@
 					</div> -->
           <br />
           <div class="text-center p-t-136">
-            <a class="txt2" href="/login">
+            <a class="txt2" href="/">
               <h5>Login Here</h5>
               <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
             </a>
@@ -89,7 +89,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 import axios from "axios";
@@ -111,25 +110,20 @@ export default {
 
   methods: {
     async handleSubmit() {
-      await axios
-        .post("/readsingle.php", {
-          id: this.id,
-          name: this.name,
-          mobile: this.mobile,
-        })
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => {
-          this.errors.status = err.status;
-          this.errors.message = err.message;
-          console.log(err);
-        });
+      const response = await axios.post("/readsingle.php", {
+        id: this.id,
+        name: this.name,
+        mobile: this.mobile,
+      });
 
       localStorage.setItem("id", this.id);
 
-      this.$router.push("/otp");
-      console.log("Succesfull");
+      if (response.data[0].status == 1) {
+        this.$router.push("/otp");
+        console.log("Succesfull");
+      } else {
+        alert("Wrong Credentials! ");
+      }
     },
   },
 };

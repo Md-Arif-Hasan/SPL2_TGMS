@@ -3,7 +3,7 @@
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
-          <img src="../assets/img-01.png" alt="IMG" />
+          <img src="../assets/attendance.jpg" alt="IMG" />
         </div>
 
         <form
@@ -65,7 +65,7 @@
             v-model="status"
             value="1"
           />
-          <label for="html"> YES </label><br />
+          <label for="html">---YES </label><br />
           <input
             type="radio"
             id="html"
@@ -73,7 +73,7 @@
             v-model="status"
             value="0"
           />
-          <label for="html"> NO </label><br />
+          <label for="html">---NO </label><br />
 
           <!-- <span class="focus-input100"></span>
             <span class="symbol-input100">
@@ -108,16 +108,18 @@ export default {
       //   localStorage.clear();
       //console.log(this.employeeid +" "+ this.date+" " + this.status);
 
-      await axios.post("attins.php", {
+      const response = await axios.post("attins.php", {
         employeeid: this.employeeid,
         date: this.date,
         status: this.status,
       });
 
-      this.$router.push("/dash");
-
-      //localStorage.setItem('token', response.data.token);
-      // localStorage.setItem("sid", this.id);
+      if (response.data[0].status == 1) {
+        alert("Attendence given successfully!");
+        this.$router.push("/attend");
+      } else {
+        alert(" Failed! ");
+      }
     },
   },
 };
@@ -130,11 +132,11 @@ export default {
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
+} */
 
 body,
 html {
@@ -162,6 +164,13 @@ a:focus {
 a:hover {
   text-decoration: none;
   color: #57b846;
+}
+
+.special {
+  font-weight: bold !important;
+  color: #fff !important;
+  background: #bc0000 !important;
+  text-transform: uppercase;
 }
 
 /*---------------------------------------------*/
@@ -199,10 +208,10 @@ textarea {
   border: none;
 }
 
-textarea:focus,
+/* textarea:focus,
 input:focus {
   border-color: transparent !important;
-}
+} */
 
 input:focus::-webkit-input-placeholder {
   color: transparent;
@@ -256,35 +265,20 @@ textarea:-ms-input-placeholder {
   color: #999999;
 }
 
-/*---------------------------------------------*/
-button {
-  outline: none !important;
-  border: none;
-  background: transparent;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-iframe {
-  border: none !important;
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #999999;
+  color: #000000;
 }
 
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 13px;
   line-height: 1.5;
-  color: #666666;
+  color: #000000;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -297,6 +291,7 @@ iframe {
 
 .container-login100 {
   width: 100%;
+  height: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -307,16 +302,25 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #9053c7;
-  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #add1ee;
+
+  background-image: url("../assets/freepik-2.jpg");
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
+  background: -o-linear-gradient(-135deg, #1874b1, #4158d0);
+  background: -moz-linear-gradient(-135deg, #0c0c0c, #4158d0);
+  background: linear-gradient(-135deg, #222122, #a7a9b1); */
 }
 
 .wrap-login100 {
   width: 960px;
-  background: #fff;
+  background: rgb(87, 161, 126);
   border-radius: 10px;
   overflow: hidden;
 
@@ -327,7 +331,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 177px 130px 33px 95px;
+  padding: 120px 130px 33px 95px; /* boxxxxxxxxxxxxxxxxx szeeeeeeeeeee */
 }
 
 /*------------------------------------------------------------------
@@ -370,7 +374,7 @@ iframe {
   font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
-  color: #666666;
+  color: #151414;
 
   display: block;
   width: 100%;
@@ -392,7 +396,7 @@ iframe {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(87, 184, 70, 0.8);
+  color: rgba(48, 38, 38, 0.8);
 }
 
 .input100:focus + .focus-input100 {
@@ -431,7 +435,7 @@ iframe {
   height: 100%;
   padding-left: 35px;
   pointer-events: none;
-  color: #666666;
+  color: #e9d9d9;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -440,7 +444,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #57b846;
+  color: #6e6767;
   padding-left: 28px;
 }
 
@@ -468,7 +472,7 @@ iframe {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #1d1c1c;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -590,5 +594,23 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("../assets/leaf-2.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

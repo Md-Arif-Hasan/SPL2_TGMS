@@ -1,28 +1,31 @@
 <template>
   <div>
     <nav-2></nav-2>
+    <div>
+      <h1 style="padding-top: 100px">Transaction History</h1>
+      <br />
+      <!-- <button>
+        <b> <router-link to="/search"> Search </router-link></b>
+      </button> -->
 
-    <h1 style="padding-top:100px"> Transaction History</h1>
-    <br />
-
+      <a href="/search" class="button">Search</a>
+    </div>
 
     <!-- <Profile v-bind:info="info"> </Profile> -->
 
-    <div class="container">
+    <div class="container" style="padding-top: 40px">
       <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
         <div class="col" v-for="inf in info" :key="inf.sid">
           <div class="card radius-15">
-            <div class="card-body text-center">
+            <div class="card-body text-center text-light">
               <div class="p-4 border radius-15">
-           
-             <h5 class="mb-0 mt-5">Employee ID: {{ inf.employeeid }}</h5> <br>
-                 <p class="mb-105">Amount: {{ inf.amount }}</p>
-                 <p class="mb-105">TID: {{ inf.tid }}</p>
-                  <p class="mb-105">Date: {{ inf.date }}</p>
-          
-                <!-- <div class="d-grid"> <router-link to="/profile" class="btn btn-outline-primary radius-15"> Go to Profile </router-link> -->
+                <h5 class="mb-0 mt-5">Employee ID: {{ inf.employeeid }}</h5>
+                <br />
+                <p class="mb-105">Amount: {{ inf.amount }}</p>
+                <p class="mb-105">TID: {{ inf.tid }}</p>
+                <p class="mb-105">Date: {{ inf.date }}</p>
 
-              
+                <!-- <div class="d-grid"> <router-link to="/profile" class="btn btn-outline-primary radius-15"> Go to Profile </router-link> -->
 
                 <!-- <button
                   @click="
@@ -42,7 +45,11 @@
       </div>
     </div>
 
-    <b> <router-link to="/search"> Search </router-link></b>
+    <button style="padding-bottom:: 10px">
+      <b> <router-link to="/search"> Search </router-link></b>
+    </button>
+
+    <br />
   </div>
 </template>
 
@@ -68,9 +75,10 @@ export default {
 
   methods: {
     fetchInfo() {
-      axios.get("/alltransaction.php").then((response) => (this.info = response.data));
+      axios
+        .get("/alltransaction.php")
+        .then((response) => (this.info = response.data));
     },
-
 
     // deleteTransaction(id) {
     //   console.log("hello");
@@ -82,7 +90,6 @@ export default {
 </script>
 
 <style scoped>
-
 body {
   background-color: #0a584b;
   margin-top: 20px;
@@ -96,7 +103,7 @@ body {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: rgb(113, 163, 155);
+  background-color: rgb(42, 110, 99);
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0);
   border-radius: 0.25rem;
@@ -129,5 +136,18 @@ element.style {
 }
 .bg-linkedin {
   background-color: #0976b4 !important;
+}
+
+.button {
+  background-color: #07595c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 </style>

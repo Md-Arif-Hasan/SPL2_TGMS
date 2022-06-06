@@ -77,17 +77,17 @@ export default {
   methods: {
     async handleSubmit() {
       //console.log(this.token);
-      await axios
-        .post("/password.php", {
-          password: this.password,
-          id: localStorage.getItem("id"),
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      const response = await axios.post("/password.php", {
+        password: this.password,
+        id: localStorage.getItem("id"),
+      });
 
-      this.$router.push("/");
-      console.log("Succesfull");
+      if (response.data[0].status == 1) {
+        alert("Password set successfully");
+        this.$router.push("/");
+      } else {
+        alert("Failed");
+      }
     },
   },
 };

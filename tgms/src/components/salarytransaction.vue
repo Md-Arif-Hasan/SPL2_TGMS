@@ -1,5 +1,6 @@
 <template>
-  <div class=" bg">
+  <div class="bg">
+    <Nav2></Nav2>
     <div class="container-login100">
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilt>
@@ -23,52 +24,15 @@
               v-model="employeeid"
               placeholder="ID"
             />
-            <!-- <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </span> -->
           </div>
 
-          <!-- <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
+          <select
+            v-model="month"
+            name="languages"
+            id="languages"
+            class="input100"
           >
-            <input
-              class="input100"
-              type="date"
-              
-              v-model="date"
-              placeholder="Date"
-            />
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-
-        <div
-            class="wrap-input100 validate-input"
-            data-validate="Password is required"
-          > 
-
-            <input
-              class="input100"
-              type="radio"
-              name="status"
-              v-model="status"
-              value="Yes"
-            /> 
-
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="1" />
-          <label for="html"> YES </label><br />
-            <input type="radio" id="html" name="fav_language"  v-model="status" value="0" />
-            <label for="html"> NO </label><br />
-            
-             -->
-
-          <select v-model="month" name="languages" class="input100">
-      
-            <option value="1" selected>January</option>
+            <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
             <option value="4">April</option>
@@ -100,32 +64,38 @@
 
 <script>
 import axios from "axios";
+import Nav2 from "./Nav2.vue";
+
 export default {
+  components: { Nav2 },
   name: "salarytransaction",
+  comments: {
+    Nav2,
+  },
 
   data() {
     return {
       employeeid: "",
-      month: "",
+      month: 1,
       tid: Math.floor(Math.random() * 100000) + 200000,
     };
   },
   methods: {
     async handleSubmit() {
-      await axios
-        .post("/salarytransaction.php", {
-          employeeid: this.employeeid,
-          month: this.month,
-          tid: this.tid,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+      const response = await axios.post("/salarytransaction.php", {
+        employeeid: this.employeeid,
+        month: this.month,
+        tid: this.tid,
+      });
 
       localStorage.setItem("tid", this.tid);
 
-      // this.$router.push("/calcwages");
-      console.log("Succesfull");
+      if (response.data[0].status == 1) {
+        alert("Salary sent successfully! ");
+        this.$router.push("/home");
+      } else {
+        alert("Send failed! ");
+      }
     },
   },
 };
@@ -138,11 +108,11 @@ export default {
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
+} */
 
 body,
 html {
@@ -271,21 +241,6 @@ textarea:-ms-input-placeholder {
   color: #999999;
 }
 
-/*---------------------------------------------*/
-/* button {
-  outline: none !important;
-  border: none;
-  background: transparent;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-iframe {
-  border: none !important;
-} */
-
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
@@ -310,7 +265,7 @@ iframe {
   margin: 0 auto;
 }
 
- .container-login100 {
+.container-login100 {
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -325,8 +280,7 @@ iframe {
   padding: 15px;
   background: #add1ee;
 
-
-    background-image: url("../assets/freepik-2.jpg");
+  background-image: url("../assets/freepik-2.jpg");
   height: 100%;
 
   /* Center and scale the image nicely */
@@ -334,12 +288,11 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover;
 
-  
-   /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
+  /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
   background: -o-linear-gradient(-135deg, #1874b1, #4158d0);
   background: -moz-linear-gradient(-135deg, #0c0c0c, #4158d0);
   background: linear-gradient(-135deg, #222122, #a7a9b1); */
-} 
+}
 
 .wrap-login100 {
   width: 960px;
@@ -354,7 +307,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 177px 130px 33px 95px;
+  padding: 120px 130px 33px 95px; /* boxxxxxxxxxxxxxxxxx szeeeeeeeeeee */
 }
 
 /*------------------------------------------------------------------
@@ -619,9 +572,8 @@ iframe {
   }
 }
 
-
-
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -637,5 +589,4 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 </style>

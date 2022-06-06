@@ -6,11 +6,7 @@
         <div class="container">
           <!-- Navbar Brand -->
           <a href="#" class="navbar-brand">
-            <img
-              src="https://bootstrapious.com/i/snippets/sn-registeration/logo.svg"
-              alt="logo"
-              width="150"
-            />
+            <img src="../assets/logo-3.png" alt="logo" width="150" />
           </a>
         </div>
       </nav>
@@ -21,7 +17,7 @@
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
           <img
-            src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg"
+            src="../assets/user.jpg"
             alt=""
             class="img-fluid mb-3 d-none d-md-block"
           />
@@ -33,15 +29,10 @@
           <form @submit.prevent="handleSubmit">
             <div class="row">
               <!-- ID-->
-              <div class="input-group col-lg-12 mb-4">
+              <div class="input-group col-lg-8 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="
-                      input-group-text
-                      bg-white
-                      px-4
-                      border-md border-right-0
-                    "
+                    class="input-group-text bg-white px-4 border-md border-right-0"
                   >
                     <i class="fa fa-user text-muted"></i>
                   </span>
@@ -57,15 +48,10 @@
               </div>
 
               <!--  Name -->
-              <div class="input-group col-lg-12 mb-4">
+              <div class="input-group col-lg-8 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="
-                      input-group-text
-                      bg-white
-                      px-4
-                      border-md border-right-0
-                    "
+                    class="input-group-text bg-white px-4 border-md border-right-0"
                   >
                     <i class="fa fa-user text-muted"></i>
                   </span>
@@ -81,15 +67,10 @@
               </div>
 
               <!-- Phone Number -->
-              <div class="input-group col-lg-12 mb-4">
+              <div class="input-group col-lg-8 mb-4">
                 <div class="input-group-prepend">
                   <span
-                    class="
-                      input-group-text
-                      bg-white
-                      px-4
-                      border-md border-right-0
-                    "
+                    class="input-group-text bg-white px-4 border-md border-right-0"
                   >
                     <i class="fa fa-phone-square text-muted"></i>
                   </span>
@@ -104,7 +85,6 @@
                   class="form-control bg-white border-md border-left-0 pl-3"
                 />
               </div>
-              .
 
               <!-- Submit Button -->
               <!-- <div class="form-group col-lg-12 mx-auto mb-0">
@@ -113,8 +93,13 @@
                 </a>
               </div> -->
 
-              <div class="container-login100-form-btn">
-                <button class="login100-form-btn">Register</button>
+              <div
+                class="container-login100-form-btn"
+                style="padding-left: 120px"
+              >
+                <button class="button">Register</button>
+
+                <!-- <a href="#" class="button">Link Button</a> -->
               </div>
 
               <!-- Already Registered -->
@@ -130,7 +115,7 @@
 import axios from "axios";
 
 export default {
-  name: "Register",
+  name: "adduser",
 
   data() {
     return {
@@ -142,21 +127,22 @@ export default {
 
   methods: {
     async handleSubmit() {
-      await axios
-        .post("/insertuser.php", {
-          id: this.id,
-          name: this.name,
+      const response = await axios.post("/insertuser.php", {
+        id: this.id,
+        name: this.name,
 
-          mobile: this.mobile,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+        mobile: this.mobile,
+      });
 
-      localStorage.setItem("id", this.id);
+      // localStorage.setItem("id", this.id);
 
-      this.$router.push("/emplist");
-      console.log("Succesfull");
+      if (response.data[0].status == 1) {
+        alert("User added successfully!");
+        this.$router.push("/emplist");
+        console.log("Succesfull");
+      } else {
+        alert("Failed ! ");
+      }
     },
   },
 };
@@ -223,5 +209,18 @@ select.form-control {
 }
 .form-control:focus {
   box-shadow: none;
+}
+
+.button {
+  background-color: #494d49;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 </style>

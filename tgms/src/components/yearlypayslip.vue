@@ -1,5 +1,4 @@
 <template>
-
   <div class="limiter">
     <nav-2></nav-2>
     <div class="container-login100">
@@ -14,7 +13,7 @@
         >
           <span class="login100-form-title"> Yearly Payslip </span>
 
-          <div
+          <!-- <div
             class="wrap-input100 validate-input"
             data-validate="Valid email is required: ex@abc.xyz"
           >
@@ -25,10 +24,9 @@
               v-model="employeeid"
               placeholder="ID"
             />
-          </div>
+          </div> -->
 
           <div>
-
             <input
               class="input100"
               type="text"
@@ -36,20 +34,17 @@
               v-model="year"
               placeholder="Year"
             />
-
           </div>
 
           <!-- <div class="container-login100-form-btn">
             <button class="login100-form-btn">submit</button>
           </div> -->
 
-        <div>
+          <div>
             <button>
               <a :href="getPdfLink()" class="btn btn-primary">Submit</a>
             </button>
           </div>
-
-          
         </form>
       </div>
     </div>
@@ -57,20 +52,18 @@
 </template>
 
 <script>
-
 import Nav2 from "./Nav2.vue";
-
 
 export default {
   components: { Nav2 },
   name: "yearlypayslip",
-  comments:{
-    Nav2
+  comments: {
+    Nav2,
   },
 
   data() {
     return {
-      employeeid: "",
+      id: "",
       year: "",
     };
   },
@@ -78,14 +71,13 @@ export default {
   methods: {
     getPdfLink() {
       return (
-        "http://localhost/php_test/yearlypayslip.php?employeeid=" +
-        this.employeeid +
+        "http://localhost/php_test/yearlypayslip.php?id=" +
+        localStorage.getItem("id") +
         "&year=" +
         this.year
       );
     },
   },
-
 };
 </script>
 
@@ -268,7 +260,7 @@ iframe {
   margin: 0 auto;
 }
 
- .container-login100 {
+.container-login100 {
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -283,7 +275,6 @@ iframe {
   padding: 15px;
   background: #7fac8d;
 
-
   background-image: url("../assets/garden-4.jpg");
   height: 100%;
 
@@ -292,11 +283,11 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover;
 
-   /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
+  /* background: -webkit-linear-gradient(-135deg, #6b666b, #4158d0);
   background: -o-linear-gradient(-135deg, #1874b1, #4158d0);
   background: -moz-linear-gradient(-135deg, #0c0c0c, #4158d0);
   background: linear-gradient(-135deg, #222122, #a7a9b1); */
-} 
+}
 
 .wrap-login100 {
   width: 960px;

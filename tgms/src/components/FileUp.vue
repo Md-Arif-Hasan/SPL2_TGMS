@@ -1,79 +1,4 @@
 <!--
-<template>
-  <div class="container">
-    <div class="large-12 medium-12 small-12 cell">
-      <h1>Vue JS Axios - Image Upload using PHP API - ItSolutionStuff.com</h1>
-
-      <form>
-                
-       <label align="left">ID </label>
-        <input type="text" class="form-control"  v-model="employeeid" placeholder="ID"/>
-         <label>Name </label>
-        <input type="text" class="form-control"  v-model="ename" placeholder="Name"/>
-        <label>Mobile Number </label>
-        <input type="text" class="form-control"  v-model="mobile" placeholder="Mobile Number"/>
-
-      </form>
-
-              <br> <br>
-
-      <label>File
-        <input type="file" id="file" ref="file" v-on:change="onChangeFileUpload()"/>
-      </label>
-        <button v-on:click="submitForm()">Upload</button>
-
-
-
-    </div>
-  </div>
-</template>
-  
-<script>
-import axios from 'axios';
-  export default {
-    data(){
-      return {
-        employeeid:'',
-        ename:'',
-        mobile:'',
-        file: ''
-      }
-    },
-  
-    methods: {
-
-      submitForm(){
-            let formData = new FormData();
-            formData.append('myfile', this.file);
-            formData.append('employeeid',this.employeeid);
-            formData.append('ename',this.ename);  
-            formData.append('mobile',this.mobile);  
-
-            axios.post('fileslogic.php',
-                    formData,
-              {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-              }
-            ).then(function(data){
-              console.log(data);
-              console.log("Hello world");
-            })
-            .catch(function(){
-              console.log('FAILURE!!');
-            });
-      },
-  
-      onChangeFileUpload(){
-        this.file = this.$refs.file.files[0];
-      }
-    }
-  }
-</script>
-
--->
-
 
 <template>
   <div>
@@ -124,13 +49,7 @@ import axios from 'axios';
           />
         </label>
 
-        <!-- <button href="#"  v-on:click="submitForm()">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit
-    </button> -->
+
       </form>
 
       <br />
@@ -141,7 +60,155 @@ import axios from 'axios';
   </div>
 </template>
 
+-->
 
+<template>
+  <div>
+    <nav-2></nav-2>
+
+    <!-- Navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+          <!-- Navbar Brand -->
+          <a href="#" class="navbar-brand">
+            <img src="../assets/logo-3.png" alt="logo" width="150" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+          <img
+            src="../assets/apply.jpg"
+            alt=""
+            class="img-fluid mb-3 d-none d-md-block"
+          />
+          <h1>Apply for loan</h1>
+        </div>
+
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+          <form @submit.prevent="handleSubmit">
+            <div class="row">
+              <!-- ID-->
+              <div class="input-group col-lg-8 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-user text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="Name"
+                  type="text"
+                  name="firstname"
+                  v-model="employeeid"
+                  placeholder="Employee ID"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!--  Name -->
+              <div class="input-group col-lg-8 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-user text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="firstName"
+                  type="text"
+                  name="firstname"
+                  v-model="ename"
+                  placeholder=" Full Name"
+                  class="form-control bg-white border-left-0 border-md"
+                  v-on:change="onChangeFileUpload()"
+                />
+              </div>
+
+              <!-- Phone Number -->
+              <div class="input-group col-lg-8 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-phone-square text-muted"></i>
+                  </span>
+                </div>
+
+                <input
+                  id="phoneNumber"
+                  type="text"
+                  name="phone"
+                  v-model="mobile"
+                  placeholder="Mobile Number"
+                  class="form-control bg-white border-md border-left-0 pl-3"
+                />
+              </div>
+
+              <div class="input-group col-lg-8 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-phone-square text-muted"></i>
+                  </span>
+                </div>
+
+                <!-- <input
+                  id="file"
+                  type="file"
+                  name="file"
+                  ref="file"
+                  v-on:change="onChangeFileUpload()"
+                  placeholder="File"
+                  class="form-control bg-white border-md border-left-0 pl-3"
+                /> -->
+
+                <input
+                  style="font-weight: bold"
+                  type="file"
+                  id="file"
+                  ref="file"
+                  v-on:change="onChangeFileUpload()"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <!-- <div class="form-group col-lg-12 mx-auto mb-0">
+                <a href="#" class="btn btn-primary btn-block py-2">
+                  <span class="font-weight-bold"> Add Information</span>
+                </a>
+              </div> -->
+              <!-- 
+              <div
+                class="container-login100-form-btn"
+                style="padding-left: 100px"
+              >
+                <button style="font-weight: bold" v-on:click="submitForm()">
+                  Upload
+                </button>
+              </div> -->
+
+              <button style="font-weight: bold" v-on:click="submitForm()">
+                Upload
+              </button>
+
+              <!-- Already Registered -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script>
 import axios from "axios";
@@ -181,7 +248,13 @@ export default {
         .catch(function () {
           console.log("FAILURE!!");
         });
-      this.$router.push("/");
+
+      // if (response.data[0].status == 1) {
+      //   alert("File upload successfully!");
+      //   this.$router.push("/home3");
+      // } else {
+      //   alert("Failed!!");
+      // }
     },
 
     onChangeFileUpload() {
@@ -190,8 +263,6 @@ export default {
   },
 };
 </script>
-
-
 
 <style scoped>
 html {
